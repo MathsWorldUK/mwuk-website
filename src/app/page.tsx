@@ -4,7 +4,7 @@ import styles from './page.module.css';
 export default function Home() {
   return (<div className={styles.page}>
     <style global jsx>{`body {--bg-gradient: #FFE5E5;}`}</style>
-    <h1>Explore! Discover! Solve!<br/><span>at London's new mathematics discovery center</span>
+    <h1>Explore! Discover! Solve!<br/><span>at London&apos;s new mathematics discovery center</span>
     </h1>
     <div className={styles.hero}></div>
     <div className={'row'}>
