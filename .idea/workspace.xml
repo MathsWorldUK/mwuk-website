@@ -5,7 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a86be154-eb2f-49cd-8685-dec215e87cea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/icons/donate.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/icons/events.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/icons/pentagon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/icons/tickets.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/shared/icons/visit.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/about/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/about/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/components/Layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/donate/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/donate/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/exhibits/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/exhibits/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.module.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.module.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/visit/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/visit/page.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,11 +62,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/shared/icons" />
+      <recent name="$PROJECT_DIR$/src/app/_shared" />
+      <recent name="$PROJECT_DIR$/public/icons" />
       <recent name="$PROJECT_DIR$/src/app" />
       <recent name="$PROJECT_DIR$/src/app/exhibits" />
-      <recent name="$PROJECT_DIR$/src/app/visit" />
-      <recent name="$PROJECT_DIR$/src/app/donate" />
-      <recent name="$PROJECT_DIR$/src/app/about" />
     </key>
   </component>
   <component name="RunManager">
@@ -109,7 +124,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1751540769366</updated>
-      <workItem from="1751540770717" duration="1482000" />
+      <workItem from="1751540770717" duration="8774000" />
     </task>
     <servers />
   </component>
