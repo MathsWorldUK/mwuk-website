@@ -1,4 +1,3 @@
-import type { Metadata } from "next";
 import { Asap } from "next/font/google";
 import {Header} from './shared/header';
 import {Footer} from './shared/footer';
