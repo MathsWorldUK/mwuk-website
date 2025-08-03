@@ -1,11 +1,12 @@
 "use client";
-
+import Image from 'next/image'
 import Sections from '../shared/sections';
 
 export default function Visit() {
   return (<div>
-    <style global jsx>{`body {--bg-gradient: #E5F3FF;}`}</style>
-    <div style={{background: '#00000066', height: '200px'}}></div>
+    <title>MathsWorld London – Visit Us</title>
+    <style global jsx>{`body {--bg-gradient: var(--p3);}`}</style>
+    <Image src={'/images/banner-1.jpg'} className={'hero'} alt={''} width={840} height={200}/>
     <h1>Plan Your Visit </h1>
 
     <Sections>

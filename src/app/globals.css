@@ -1,15 +1,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --p1: #DE167B;
-  --p2: #398DEF;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --p1: #03BEED;
+  --p2: #E60F29;
+  --p3: #FFB700;
+  --p4: #8ED927;
+  --p5: #A74DF0;
 }
 
 * {
@@ -31,8 +27,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
-  background: linear-gradient(to bottom, var(--bg-gradient, white), transparent);
-  font-family: var(--font-asap);
+  background: linear-gradient(to bottom, color-mix(in srgb, var(--bg-gradient, var(--p1)), transparent) 0, transparent 500px);
+  /* background-attachment: fixed; */
+  font-family: var(--font-asap), Helvetica, sans-serif;
 }
 
 main {
@@ -43,9 +40,19 @@ main {
 
 .banner {
   text-align: center;
-  background: #f1b640;
+  background: var(--p3);
   color: black;
   padding: 2px;
+}
+
+.hero {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.tile {
+  border-radius: 20px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
 h1 { line-height: 1.2; font-size: 3rem; text-align: center; margin: 2rem 0 3rem; }
@@ -61,11 +68,21 @@ a {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
+  margin: 2rem 0;
+  > .grow { flex-grow: 1; width: 200px; }
+  > div > *:first-child { margin-top: 0; }
+  > div > *:last-child { margin-bottom: 0; }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+
   html {
     color-scheme: dark;
   }
-}
+} */

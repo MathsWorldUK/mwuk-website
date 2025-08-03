@@ -14,7 +14,7 @@
     display: flex;
     gap: 1rem;
     font-weight: bold;
-    color: var(--p1);
+    color: var(--p2);
 
     a {
       background: rgba(255, 255, 255, 0.2);
@@ -29,7 +29,7 @@
       &:hover, &:focus { color: white; }
 
       &.tickets {
-        background: var(--p1);
+        background: var(--p2);
         color: white;
       }
     }
@@ -38,7 +38,7 @@
       position: absolute;
       top: 0;
       left: 0;
-      fill: var(--p1);
+      fill: var(--p2);
       opacity: 0;
       transform: scale(0.5);
       transform-origin: 50% 50%;

@@ -1,10 +1,30 @@
 .hero {
-  height: 300px;
   display: grid;
-  grid-template-columns: repeat(8, 40px);
-  grid-template-rows: repeat(4, 40px);
+  grid-template-columns: repeat(7, 100px);
+  grid-template-rows: repeat(4, 100px);
   column-gap: 20px;
   row-gap: 20px;
+  margin-bottom: 5rem;
 
-  > div { background: red; }
+  @media screen and (max-width: 870px) {
+    grid-template-columns: repeat(7, 11vw);
+    grid-template-rows: repeat(4, 11vw);
+    column-gap: 2.2vw;
+    row-gap: 2.2vw;
+  }
+}
+
+.outer {
+  overflow: hidden;
+  @media screen and (max-width: 870px) {
+    border-radius: 2.2vw;
+  }
+}
+
+.inner {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  transition: transform .2s;
+  .outer:hover & { transform: scale(1.1) rotate(-5deg); }
 }

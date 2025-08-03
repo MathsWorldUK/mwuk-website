@@ -2,11 +2,13 @@
   h1 {
     text-align: center;
     color: transparent;
-    font-size: 3rem;
-    background-image: linear-gradient(26deg, rgb(41, 145, 255) 0%, rgb(49, 103, 240) 25%, rgb(67, 107, 208) 50%, rgb(149, 115, 255) 75%, rgb(159, 159, 255) 100%);
+    font-size: 2.8rem;
+    background-image: linear-gradient(26deg, var(--p2) 0%, var(--p3) 100%);
     background-clip: text;
     line-height: 0.9;
     margin-bottom: 2rem;
-    span { font-size: 2rem; }
+    span { font-size: 1.8rem; }
   }
+
+  h2 { color: var(--p1); }
 }
