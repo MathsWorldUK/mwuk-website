@@ -9,6 +9,8 @@
     height: fit-content;
     font-size: 18px;
     flex-shrink: 0;
+    @media screen and (max-width: 800px) { width: 150px; }
+    @media screen and (max-width: 640px) { display: none; }
   }
 
   nav button {

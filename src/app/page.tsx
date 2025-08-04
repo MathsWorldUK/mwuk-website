@@ -15,7 +15,7 @@ export default function Home() {
       </div>
       <div>
         <a href={"https://maps.app.goo.gl/J5Df9KVdJzw2M2Qu7"} target={"_blank"} className={'tile-wrap'}>
-          <Image src={'/images/map.png'} className={'tile'} width={340} height={200} alt={"Location Map"}/>
+          <Image src={'/images/map.png'} className={'tile'} width={340} height={220} alt={"Location Map"}/>
         </a>
       </div>
     </div>

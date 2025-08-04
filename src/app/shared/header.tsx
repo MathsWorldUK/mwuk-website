@@ -9,7 +9,7 @@ import VisitIcon from './icons/visit.svg';
 
 export function Header() {
   return (<header className={styles.header}>
-    <Link href="/"><Image src={`/images/logo.svg`} width={340} height={100} alt={`MathsWorld`}/></Link>
+    <Link className={styles.logo} href="/"><Image src={`/images/logo.svg`} width={340} height={100} alt={`MathsWorld`}/></Link>
     <nav>
       <Link href="/visit">
         <VisitIcon className={styles.icon}/>
