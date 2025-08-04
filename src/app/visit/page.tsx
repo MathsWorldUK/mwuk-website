@@ -6,7 +6,7 @@ export default function Visit() {
   return (<div>
     <title>MathsWorld London – Visit Us</title>
     <style global jsx>{`body {--bg-gradient: var(--p3);}`}</style>
-    <Image src={'/images/banner-1.jpg'} className={'hero'} alt={''} width={840} height={200}/>
+    <Image src={'/images/banner-1.jpg'} className={'hero'} alt={''} width={820} height={200}/>
     <h1>Plan Your Visit </h1>
 
     <Sections>
@@ -16,7 +16,7 @@ export default function Visit() {
           <li><strong>Tuesday - Friday:</strong> 10am – 4pm</li>
           <li><strong>Saturday - Sunday:</strong> 10am – 5pm</li>
         </ul>
-        <p>We recommend that you book your tickets in advance to avoid disappointment. On some school days during term time, MathsCity may be closed for exclusive school bookings.</p>
+        <p>We recommend that you book your tickets in advance to avoid disappointment. On some school days during term time, MathsWorld may be closed for exclusive school bookings.</p>
         <p>Please arrive no later than 20 minutes after the time on your ticket. There is no limit to the duration of your visit though visitors typically stay for 1 hour 20 minutes. Last admission is 1 hour before closing time.</p>
       </section>
 
@@ -27,8 +27,7 @@ export default function Visit() {
           <li>Southwark (Jubilee Line): 5 min walk</li>
           <li>Blackfrias Station (Thameslink): 5 min walk</li>
           <li>Blackfrias Station (Circle and District Line): 9 min walk</li>
-          <li>Blackfrias Station (Circle and District Line): 9 min walk</li>
-          <li>London Bridge Station (Jubilee and Northern Lines, National Rail): 17 min walk</li>
+          <li>London Bridge Station (Jubilee and Northern, National Rail): 17 min walk</li>
           <li>Waterloo East Station (National Rail): 8 min walk</li>
           <li>Bus: Blackfrias Road stops SL or SM</li>
         </ul>
@@ -57,7 +56,7 @@ export default function Visit() {
           <li>Large print materials available upon request</li>
           <li>Sign language interpretation available (advance booking required)</li>
         </ul>
-        <p>For specific accessibility requirements, please contact us at accessibility@mathsworld.com</p>
+        <p>For specific accessibility requirements, please contact us at <a href={'mailto:accessibility@mathsworld.com'}>accessibility@mathsworld.com</a></p>
       </section>
 
       <section id="school-visits">
@@ -73,7 +72,7 @@ export default function Visit() {
         <p>
           <strong>Pricing:</strong> £8 per student, 1 free adult per 10 students
         </p>
-        <p>To book a school visit, email schools@mathsworld.com or call 01234 567890</p>
+        <p>To book a school visit, email <a href={'mailto:schools@mathsworld.com'}>schools@mathsworld.com</a> or call 01234 567890</p>
       </section>
 
       <section id="group-visits">
@@ -88,10 +87,8 @@ export default function Visit() {
           <li>Professional tour guides available</li>
           <li>Customizable visit itineraries</li>
         </ul>
-        <p>
-          <strong>Advance booking required:</strong> Please book at least 2 weeks in advance
-        </p>
-        <p>For group bookings, contact groups@mathsworld.com or call 01234 567891</p>
+        <p><strong>Advance booking required:</strong> Please book at least two weeks in advance.</p>
+        <p>For group bookings, contact <a href={'mailto:groups@mathsworld.com'}>groups@mathsworld.com</a> or call 01234 567891.</p>
       </section>
     </Sections>
   </div>);

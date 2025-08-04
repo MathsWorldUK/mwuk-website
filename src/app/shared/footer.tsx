@@ -2,23 +2,23 @@ import styles from './footer.module.css';
 import Image from 'next/image'
 
 const SPONSORS = [
-  {id: 'g-research', name: 'G Research', link: ''},
-  {id: 'qrt', name: 'QRT', link: ''},
-  {id: 'open', name: 'The Open University', link: ''},
+  {id: 'aitt', name: 'Association of Information Technology Trust', link: ''},
   {id: 'ben-delo', name: 'Ben Delo Foundation', link: ''},
-  // TODO AITT
   {id: 'civa', name: 'CIVA', link: ''},
-  {id: 'mathigon', name: 'Mathigon', link: ''},
-  {id: 'xtx', name: 'XTX Markets', link: ''}
+  {id: 'g-research', name: 'G Research', link: 'https://www.gresearch.com'},
+  {id: 'mathigon', name: 'Mathigon', link: 'https://mathigon.org'},
+  {id: 'open', name: 'The Open University', link: 'https://www.open.ac.uk'},
+  {id: 'qrt', name: 'Qube Research & Technologies', link: 'https://www.qube-rt.com'},
+  {id: 'xtx', name: 'XTX Markets', link: 'https://www.xtxmarkets.com'}
 ];
 
 export function Footer() {
   return (<footer className={styles.footer}>
-    <div className={styles.centered}>Generously supported by</div>
+    <p>© <a href={'https://www.mathsworlduk.com'} target={'_blank'}>MathsWorldUK</a>, registered in England and Wales as a charity (number 1155010) and a company (number 8370409).<br/>Visit our other museum, <a href={'https://mathscity.co.uk'} target={'_blank'}>MathsCity Leeds</a>.</p>
+    <p>MathsWorld London is generously supported by</p>
     <div className={styles.sponsors}>
-      {SPONSORS.map(s => <a href={s.link} key={s.id}><Image src={`/images/sponsors/${s.id}.png`} alt={s.name} width={100} height={100}/></a>)}
+      {SPONSORS.map(s => <a href={s.link} key={s.id}><Image src={`/images/sponsors/${s.id}.png`} alt={s.name} width={72} height={72}/></a>)}
     </div>
-    <p>© MathsWorldUK, registered in England and Wales as a charity (number 1155010) and a company (number 8370409)</p>
-    <p>Instagram • Facebook • ...</p>
+    <p>Follow us on <a>Instagram</a> • <a>Facebook</a> • <a>Bluesky</a></p>
   </footer>);
 }

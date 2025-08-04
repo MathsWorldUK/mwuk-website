@@ -6,31 +6,26 @@ import DonateIcon from './icons/donate.svg';
 import EventsIcon from './icons/events.svg';
 import TicketsIcon from './icons/tickets.svg';
 import VisitIcon from './icons/visit.svg';
-import PentagonIcon from './icons/pentagon.svg';
 
 export function Header() {
   return (<header className={styles.header}>
     <Link href="/"><Image src={`/images/logo.svg`} width={340} height={100} alt={`MathsWorld`}/></Link>
     <nav>
       <Link href="/visit">
-        <PentagonIcon className={styles.pentagon}/>
         <VisitIcon className={styles.icon}/>
-        Visit
+        <span>Visit</span>
       </Link>
       <Link href="/events">
-        <PentagonIcon className={styles.pentagon}/>
         <EventsIcon className={styles.icon}/>
-        Events
+        <span>Events</span>
       </Link>
       <Link href="/support">
-        <PentagonIcon className={styles.pentagon}/>
         <DonateIcon className={styles.icon}/>
-        Support
+        <span>Support</span>
       </Link>
-      <a className={styles.tickets}>
-        <PentagonIcon className={styles.pentagon}/>
+      <a className={styles.tickets} style={{cursor: 'not-allowed'}}>
         <TicketsIcon className={styles.icon}/>
-        Tickets
+        <span>Tickets</span>
       </a>
     </nav>
   </header>);

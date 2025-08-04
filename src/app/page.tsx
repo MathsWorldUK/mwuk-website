@@ -10,15 +10,30 @@ export default function Home() {
     <h2>Welcome to the home of hands-on mathematics!</h2>
     <div className={'row'}>
       <div className={'grow'}>
-        <p>Located on the South Bank, a few minutes walk from many different tube and train stations, MathsWorld is the perfect destination for anyone who want to understand why mathematics is beautiful, fun, surprising, mind-blowing, and useful in everyday life – kids or adults.</p>
-        <p>Climb inside a giant bubble or a kaleidoscope. Try our laser Ring of Fire. Meet the challenge of our fascinating puzzles. Over forty interactive exhibits allow visitors to enjoy and appreciate the power and importance of mathematics as a tool for understanding the world in which we live.</p>
+        <p>MathsWorld is the <strong>first permanent museum</strong> about mathematics in the UK, located beneath a railway arch on London’s vibrant South Bank, just a few minutes walk from major tube and train stations.</p>
+        <p>We invite <strong>visitors of all ages</strong>, from 1 to 100, to explore the beauty, creativity, and power of mathematics – as well as families, groups and school classes.</p>
       </div>
-      <p></p>
       <div>
-        <a href={"https://maps.app.goo.gl/J5Df9KVdJzw2M2Qu7"} target={"_blank"}>
+        <a href={"https://maps.app.goo.gl/J5Df9KVdJzw2M2Qu7"} target={"_blank"} className={'tile-wrap'}>
           <Image src={'/images/map.png'} className={'tile'} width={340} height={200} alt={"Location Map"}/>
         </a>
       </div>
     </div>
+    <p>Whether you’re a lifelong maths enthusiast or a curious sceptic, our <strong>interactive, hands-on exhibits</strong> will surprise, delight, and challenge you. Step inside a giant soap bubble or a kaleidoscope. Try our laser ring of fire. Crack secret codes. Play pool on an elliptical table. Solve fascinating puzzles. Discover the hidden maths in everyday life.</p>
+    <p>With over forty innovative exhibits and a packed <strong>programme of events</strong>, MathsWorld is a place to spark curiosity, ignite imagination, and see mathematics as you’ve never seen it before: fun, colourful, mind-blowing, and deeply connected to the world around us.</p>
+    <div className={'row'}>
+      <div className={'tile-wrap'}><Image src={'/images/mockup-1.jpg'} className={'tile'} width={340} height={220} alt={"Architect mockup"}/></div>
+      <div className={'tile-wrap'}><Image src={'/images/mockup-2.jpg'} className={'tile'} width={340} height={220} alt={"Architect mockup"}/></div>
+      <div className={'tile-wrap'}><Image src={'/images/mockup-3.jpg'} className={'tile'} width={340} height={220} alt={"Architect mockup"}/></div>
+      <div className={'tile-wrap'}><Image src={'/images/mockup-4.jpg'} className={'tile'} width={340} height={220} alt={"Architect mockup"}/></div>
+    </div>
+    <blockquote>
+      <p>Mathematics has beauty and romance. It’s not a boring place to be, the mathematical world. It’s an extraordinary place; it’s worth spending time there.</p>
+      <p>– Marcus du Sautoy, British mathematician</p>
+    </blockquote>
+
+
+
+
   </div>);
 }

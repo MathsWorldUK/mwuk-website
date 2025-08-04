@@ -1,5 +1,5 @@
 :root {
-  --background: #ffffff;
+  --background: #FFF;
   --foreground: #171717;
   --p1: #03BEED;
   --p2: #E60F29;
@@ -23,12 +23,12 @@ body {
 body {
   font-size: 18px;
   color: var(--foreground);
-  background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   line-height: 1.4;
-  background: linear-gradient(to bottom, color-mix(in srgb, var(--bg-gradient, var(--p1)), transparent) 0, transparent 500px);
-  /* background-attachment: fixed; */
+  background: var(--background);
+  background-image: url('/images/penrose.svg'), linear-gradient(to bottom, color-mix(in srgb, var(--bg-gradient, var(--p1)) 60%, transparent) 0, transparent 720px);
+  background-repeat: repeat, no-repeat;
   font-family: var(--font-asap), Helvetica, sans-serif;
 }
 
@@ -42,38 +42,78 @@ main {
   text-align: center;
   background: var(--p3);
   color: black;
-  padding: 2px;
+  padding: 3px;
+  font-size: 16px;
 }
 
 .hero {
   max-width: 100%;
   border-radius: 12px;
+  display: block;
 }
 
 .tile {
+  display: block;
   border-radius: 20px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
+.tile-wrap { display: block; position: relative; }
+.tile-wrap:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  border-radius: 20px;
+  box-sizing: border-box;
+  border: 2px solid rgba(0, 0, 0, 0.15);
+}
 
-h1 { line-height: 1.2; font-size: 3rem; text-align: center; margin: 2rem 0 3rem; }
+h1 { line-height: 1.2; font-size: 3rem; text-align: center; margin: 3rem 0; }
 h2 { line-height: 1.2; font-size: 2rem; margin: 3rem 0 1.5rem; }
 p { line-height: 1.6; margin: 0 0 .8rem 0; }
 ul, ol { margin: 0 0 .8rem 2rem; }
 li { margin: 0 0 .4rem 0; }
 
-a {
-  color: inherit;
-  text-decoration: none;
+a { color: inherit; text-decoration: none; }
+p a {
+  color: var(--p1);
+  background-size: 0 100%;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(transparent calc(100% - 2px), currentColor calc(100% - 2px), currentColor calc(100% - 1px), transparent calc(100% - 1px));
+  transition: color .2s, background-size 0.2s ease-in-out;
+  &:hover { background-size: 100% 100%; }
+}
+
+h1 {
+  color: transparent;
+  background-image: linear-gradient(26deg, var(--p2) 0%, var(--p3) 100%);
+  background-clip: text;
 }
 
 .row {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
   margin: 2rem 0;
   > .grow { flex-grow: 1; width: 200px; }
   > div > *:first-child { margin-top: 0; }
   > div > *:last-child { margin-bottom: 0; }
+}
+
+blockquote {
+  text-align: center;
+  color: transparent;
+  font-weight: 600;
+  background-image: linear-gradient(26deg, var(--p2) 0%, var(--p3) 100%);
+  background-clip: text;
+  font-size: 1.8rem;
+  margin: 3rem auto;
+  max-width: 530px;
+  p { line-height: 1.2; }
+  p:last-child { margin-bottom: 0; font-size: 1.3rem; font-style: italic; font-weight: 500; }
 }
 
 /* @media (prefers-color-scheme: dark) {
