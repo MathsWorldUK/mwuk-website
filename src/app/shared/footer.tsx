@@ -19,6 +19,6 @@ export function Footer() {
     <div className={styles.sponsors}>
       {SPONSORS.map(s => <a href={s.link} key={s.id}><Image src={`/images/sponsors/${s.id}.png`} alt={s.name} width={72} height={72}/></a>)}
     </div>
-    <p>Follow us on <a>Instagram</a> • <a>Facebook</a> • <a>Bluesky</a></p>
+    <p>Follow us on <a href={''} target={'_blank'}>Instagram</a> • <a href={'https://www.facebook.com/mathsworlduk'} target={'_blank'}>Facebook</a> • <a href={'https://bsky.app/profile/mathsworld.com'} target={'_blank'}>Bluesky</a> • <a href={'https://www.tiktok.com/@mathsworlduk'} target={'_blank'}>TokTok</a></p>
   </footer>);
 }

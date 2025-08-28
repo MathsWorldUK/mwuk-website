@@ -14,7 +14,7 @@ export default function Home() {
         <p>We invite <strong>visitors of all ages</strong>, from 1 to 100, to explore the beauty, creativity, and power of mathematics – as well as families, groups and school classes.</p>
       </div>
       <div>
-        <a href={"https://maps.app.goo.gl/J5Df9KVdJzw2M2Qu7"} target={"_blank"} className={'tile-wrap'}>
+        <a href={"https://maps.app.goo.gl/jbQYo77AV8Rcihdz8"} target={"_blank"} className={'tile-wrap'}>
           <Image src={'/images/map.png'} className={'tile'} width={340} height={220} alt={"Location Map"}/>
         </a>
       </div>
