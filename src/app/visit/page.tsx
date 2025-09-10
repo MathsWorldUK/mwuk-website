@@ -22,39 +22,36 @@ export default function Visit() {
 
       <section id="directions">
         <h2>Directions</h2>
-        <p>MathsWorld is located in the center of London, with excellent transport links. No parking is available on-site, and we recommend arriving by public transport.</p>
+        <p>MathsWorld is located in the centre of London, with excellent transport links. No parking is available on-site, and we recommend arriving by public transport.</p>
         <ul>
           <li>Southwark (Jubilee Line): 5 min walk</li>
-          <li>Blackfrias Station (Thameslink): 5 min walk</li>
-          <li>Blackfrias Station (Circle and District Line): 9 min walk</li>
+          <li>Blackfriars Station (Thameslink): 5 min walk</li>
+          <li>Blackfriars Station (Circle and District Line): 9 min walk</li>
           <li>London Bridge Station (Jubilee and Northern, National Rail): 17 min walk</li>
           <li>Waterloo East Station (National Rail): 8 min walk</li>
-          <li>Bus: Blackfrias Road stops SL or SM</li>
+          <li>Bus: Blackfriars Road stops SL or SM</li>
         </ul>
       </section>
 
       <section id="ticket-prices">
         <h2>Ticket Prices</h2>
-        <p>All our tickets are annual passes, allowing you to return to MathsWorld as many times as you want.</p>
+        <p>All our public tickets are annual passes, allowing you to return to MathsWorld as many times as you want.</p>
         <ul>
-          <li>Adults: £15</li>
+          <li>Adults: £14.50</li>
           <li>Children and concessions: £13</li>
           <li>Under 3s: Free</li>
-          <li>Family ticket (four people with at most two adults): £45</li>
         </ul>
         <p>Concessions include registered disabled person, registered carer for disabled person, students.</p>
       </section>
 
       <section id="accessibility">
         <h2>Accessibility</h2>
-        <p>MathsWorld is committed to being accessible to all visitors:</p>
+        <p>MathsWorld is committed to being accessible to all visitors, and we are
+          continually developing in this aspect:</p>
         <ul>
           <li>Wheelchair accessible entrances and exhibits</li>
           <li>Accessible restrooms throughout the facility</li>
-          <li>Audio guides available for visually impaired visitors</li>
-          <li>Quiet spaces for visitors with sensory sensitivities</li>
-          <li>Large print materials available upon request</li>
-          <li>Sign language interpretation available (advance booking required)</li>
+          <li>Headphones for visitors with sensory sensitivities</li>
         </ul>
         <p>For specific accessibility requirements, please contact us at <a href={'mailto:accessibility@mathsworld.com'}>accessibility@mathsworld.com</a></p>
       </section>
@@ -63,14 +60,13 @@ export default function Visit() {
         <h2>School Visits</h2>
         <p>Specially designed educational programs for school groups:</p>
         <ul>
-          <li>Guided tours tailored to curriculum requirements</li>
+          <li>Guided tours</li>
           <li>Interactive workshops for different age groups</li>
           <li>Educational resources and activity sheets</li>
-          <li>Dedicated school entrance and facilities</li>
           <li>Teacher preview visits available</li>
         </ul>
         <p>
-          <strong>Pricing:</strong> £8 per student, 1 free adult per 10 students
+          <strong>Pricing:</strong> £11 per student, 1 free adult per 10 students
         </p>
         <p>To book a school visit, email <a href={'mailto:schools@mathsworld.com'}>schools@mathsworld.com</a> or call 01234 567890</p>
       </section>
@@ -81,9 +77,7 @@ export default function Visit() {
           Special arrangements for groups of 15 or more: </p>
         <ul>
           <li>Discounted group rates (10% off standard admission)</li>
-          <li>Dedicated group entrance to avoid queues</li>
           <li>Reserved seating areas for presentations</li>
-          <li>Group dining options in our café</li>
           <li>Professional tour guides available</li>
           <li>Customizable visit itineraries</li>
         </ul>
