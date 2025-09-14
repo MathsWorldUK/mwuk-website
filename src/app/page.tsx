@@ -11,12 +11,13 @@ export default function Home() {
     <div className={'row'}>
       <div className={'grow'}>
         <p>MathsWorld is the <strong>first permanent museum</strong> about mathematics in the UK, located beneath a railway arch on London’s vibrant South Bank, just a few minutes walk from major tube and train stations.</p>
-        <p>We invite <strong>visitors of all ages</strong>, from 1 to 100, to explore the beauty, creativity, and power of mathematics – as well as families, groups and school classes.</p>
+        <p>We invite <strong>visitors of all ages</strong>, from 1 to 100, to explore the beauty, creativity, and power of mathematics. MathsWorld is also a great destination for families, groups and school classes.</p>
       </div>
       <div>
         <a href={"https://maps.app.goo.gl/jbQYo77AV8Rcihdz8"} target={"_blank"} className={'tile-wrap'}>
           <Image src={'/images/map.png'} className={'tile'} width={340} height={220} alt={"Location Map"}/>
         </a>
+        <p className={styles.caption}>Arches, 6 Burrell St, London SE1 0UN</p>
       </div>
     </div>
     <p>Whether you’re a lifelong maths enthusiast or a curious sceptic, our <strong>interactive, hands-on exhibits</strong> will surprise, delight, and challenge you. Step inside a giant soap bubble or a kaleidoscope. Try our laser ring of fire. Crack secret codes. Play pool on an elliptical table. Solve fascinating puzzles. Discover the hidden maths in everyday life.</p>

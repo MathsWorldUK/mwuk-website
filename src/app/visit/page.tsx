@@ -22,6 +22,7 @@ export default function Visit() {
 
       <section id="directions">
         <h2>Directions</h2>
+        <p>Visit us at Arches, 6 Burrell St, London SE1 0UN</p>
         <p>MathsWorld is located in the centre of London, with excellent transport links. No parking is available on-site, and we recommend arriving by public transport.</p>
         <ul>
           <li>Southwark (Jubilee Line): 5 min walk</li>

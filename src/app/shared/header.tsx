@@ -23,7 +23,7 @@ export function Header() {
         <DonateIcon className={styles.icon}/>
         <span>Support</span>
       </Link>
-      <a className={styles.tickets} style={{cursor: 'not-allowed'}}>
+      <a className={styles.tickets} href={'https://mathscity.digitickets.co.uk/tickets?branches.branchID=3679'} target={'_blank'}>
         <TicketsIcon className={styles.icon}/>
         <span>Tickets</span>
       </a>
