@@ -6,7 +6,7 @@ const SPONSORS = [
   {id: 'ben-delo', name: 'Ben Delo Foundation', link: ''},
   {id: 'civa', name: 'CIVA', link: ''},
   {id: 'g-research', name: 'G Research', link: 'https://www.gresearch.com'},
-  {id: 'mathigon', name: 'Mathigon', link: 'https://mathigon.org'},
+  // {id: 'mathigon', name: 'Mathigon', link: 'https://mathigon.org'},
   {id: 'open', name: 'The Open University', link: 'https://www.open.ac.uk'},
   {id: 'qrt', name: 'Qube Research & Technologies', link: 'https://www.qube-rt.com'},
   {id: 'xtx', name: 'XTX Markets', link: 'https://www.xtxmarkets.com'}
@@ -14,7 +14,7 @@ const SPONSORS = [
 
 export function Footer() {
   return (<footer className={styles.footer}>
-    <p>© <a href={'https://www.mathsworlduk.com'} target={'_blank'}>MathsWorldUK</a>, registered in England and Wales as a charity (number 1155010) and a company (number 8370409).<br/>Visit our other museum, <a href={'https://mathscity.co.uk'} target={'_blank'}>MathsCity Leeds</a>.</p>
+    <p>© <a href={'https://www.mathsworlduk.com'} target={'_blank'}>MathsWorldUK</a>, registered in England and Wales as a charity (number 1155010) and a company (number 8370409). Visit our other museum, <a href={'https://mathscity.co.uk'} target={'_blank'}>MathsCity Leeds</a>.</p>
     <p>MathsWorld London is generously supported by</p>
     <div className={styles.sponsors}>
       {SPONSORS.map(s => <a href={s.link} key={s.id}><Image src={`/images/sponsors/${s.id}.png`} alt={s.name} width={72} height={72}/></a>)}

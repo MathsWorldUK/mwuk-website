@@ -30,7 +30,7 @@ body {
   background: var(--background);
   background-image: url('/images/penrose.svg'), linear-gradient(to bottom, color-mix(in srgb, var(--bg-gradient, var(--p1)) 60%, transparent) 0, transparent 720px);
   background-repeat: repeat, no-repeat;
-  font-family: var(--font-asap), Helvetica, sans-serif;
+  font-family: var(--font-ubuntu), Helvetica, sans-serif;
 }
 
 main {
@@ -123,7 +123,7 @@ blockquote {
   background-clip: text;
   font-size: 1.8rem;
   margin: 3rem auto;
-  max-width: 530px;
+  max-width: 580px;
   p { line-height: 1.2; }
   p:last-child { margin-bottom: 0; font-size: 1.3rem; font-style: italic; font-weight: 500; }
 }
