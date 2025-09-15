@@ -17,18 +17,19 @@ export default function Visit() {
           <li><strong>Saturday - Sunday:</strong> 10am – 5pm</li>
         </ul>
         <p>We recommend that you book your tickets in advance to avoid disappointment. On some school days during term time, MathsWorld may be closed for exclusive school bookings.</p>
-        <p>Please arrive no later than 20 minutes after the time on your ticket. There is no limit to the duration of your visit though visitors typically stay for 1 hour 20 minutes. Last admission is 1 hour before closing time.</p>
+        <p>Please arrive no later than 20 minutes after the time on your ticket. There is no limit to the duration of your visit, but visitors typically stay for 1-2 hours. Last admission is 1 hour before closing time.</p>
+        <p>When arriving, bring the booking number or e-ticket you will receive via email.</p>
       </section>
 
       <section id="directions">
         <h2>Directions</h2>
-        <p>Visit us at Arches, 6 Burrell St, London SE1 0UN</p>
+        <p>Visit us at <a href={'https://maps.app.goo.gl/jbQYo77AV8Rcihdz8'} target={'_blank'}>Arches, 6 Burrell St, London SE1 0UN</a></p>
         <p>MathsWorld is located in the centre of London, with excellent transport links. No parking is available on-site, and we recommend arriving by public transport.</p>
         <ul>
           <li>Southwark (Jubilee Line): 5 min walk</li>
           <li>Blackfriars Station (Thameslink): 5 min walk</li>
           <li>Blackfriars Station (Circle and District Line): 9 min walk</li>
-          <li>London Bridge Station (Jubilee and Northern, National Rail): 17 min walk</li>
+          <li>London Bridge Station (Jubilee, Northern, National Rail): 17 min walk</li>
           <li>Waterloo East Station (National Rail): 8 min walk</li>
           <li>Bus: Blackfriars Road stops SL or SM</li>
         </ul>
@@ -42,48 +43,30 @@ export default function Visit() {
           <li>Children and concessions: £13</li>
           <li>Under 3s: Free</li>
         </ul>
-        <p>Concessions include registered disabled person, registered carer for disabled person, students.</p>
+        <p>Concessions include registered disabled persons, registered carers, students and OAPs.</p>
+        <p>All children under the age of 14 need to be accompanied by an adult.</p>
       </section>
 
       <section id="accessibility">
         <h2>Accessibility</h2>
-        <p>MathsWorld is committed to being accessible to all visitors, and we are
-          continually developing in this aspect:</p>
-        <ul>
-          <li>Wheelchair accessible entrances and exhibits</li>
-          <li>Accessible restrooms throughout the facility</li>
-          <li>Headphones for visitors with sensory sensitivities</li>
-        </ul>
+        <p>MathsWorld is committed to being accessible and welcoming to all visitors, and we are continually developing in this aspect. Our exhibition and exhibits are accessible to wheelchair users. We also have an accessible toilet.</p>
+        <p>MathsWorld is a popular venue for visitors with ASD. We recommend ear defenders to avoid over stimulation.</p>
+        <p>MathsWorld is not suitable for those with severe visual impairments. The exhibits are designed to give a visual experience of mathematics for those who are not happy with the symbols and numbers in mathematics.</p>
         <p>For specific accessibility requirements, please contact us at <a href={'mailto:accessibility@mathsworld.com'}>accessibility@mathsworld.com</a></p>
       </section>
 
       <section id="school-visits">
         <h2>School Visits</h2>
-        <p>Specially designed educational programs for school groups:</p>
-        <ul>
-          <li>Guided tours</li>
-          <li>Interactive workshops for different age groups</li>
-          <li>Educational resources and activity sheets</li>
-          <li>Teacher preview visits available</li>
-        </ul>
-        <p>
-          <strong>Pricing:</strong> £11 per student, 1 free adult per 10 students
-        </p>
-        <p>To book a school visit, email <a href={'mailto:schools@mathsworld.com'}>schools@mathsworld.com</a> or call 01234 567890</p>
+        <p>To book a school visit, please email <a href={'mailto:schools@mathsworld.com'}>schools@mathsworld.com</a>. We can accommodate up to 40 students (excluding accompanying staff).</p>
+        <p>School tickets are priced at £11 per student, with 1 free adult per 10 students. Additional workshops can be arranged free of charge to complement your visit. Visits with a workshop will typically last 2 hours.</p>
+        <p>MathsWorld has something to offer visitors of all ages, but we have designed most exhibits to be especially interesting for years 4–9.</p>
+        <p>All the exhibits have an associated set of activities and follow on resources for you to use in the classroom after your visit. <a href={'https://www.mathsworlduk.com/exhibits/'} target={'_blank'}>Learn more…</a></p>
       </section>
 
       <section id="group-visits">
         <h2>Group Visits</h2>
-        <p>
-          Special arrangements for groups of 15 or more: </p>
-        <ul>
-          <li>Discounted group rates (10% off standard admission)</li>
-          <li>Reserved seating areas for presentations</li>
-          <li>Professional tour guides available</li>
-          <li>Customizable visit itineraries</li>
-        </ul>
-        <p><strong>Advance booking required:</strong> Please book at least two weeks in advance.</p>
-        <p>For group bookings, contact <a href={'mailto:groups@mathsworld.com'}>groups@mathsworld.com</a> or call 01234 567891.</p>
+        <p>MathsWorld is a perfect venue for a day of fun and team building. Our interactive space is created to explore the wonders of mathematics, but its also a great space to work together. </p>
+        <p>The maximum group size we can accommodate is 40. Please book at least two weeks in advance by emailing <a href={'mailto:groups@mathsworld.com'}>groups@mathsworld.com</a>.</p>
       </section>
     </Sections>
   </div>);
