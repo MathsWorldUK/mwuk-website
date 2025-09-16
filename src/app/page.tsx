@@ -5,7 +5,7 @@ import styles from './page.module.css';
 export default function Home() {
   return (<div className={styles.page}>
     <title>MathsWorld – London’s new Museum of Mathematics</title>
-    <h1>Explore! Discover! Solve!<br/><span>in London’s new mathematics discovery center</span></h1>
+    <h1>Explore! Discover! Solve!<br/><span>in London’s new mathematics discovery centre</span></h1>
     <Hero/>
     <h2>Welcome to the home of hands-on mathematics!</h2>
     <div className={'row'}>
