@@ -59,8 +59,8 @@ export default function Visit() {
         <h2>School Visits</h2>
         <p>To book a school visit, please email <a href={'mailto:schools@mathsworld.com'}>schools@mathsworld.com</a>. We can accommodate up to 40 students (excluding accompanying staff).</p>
         <p>School tickets are priced at £11 per student, with 1 free adult per 10 students. Additional workshops can be arranged free of charge to complement your visit. Visits with a workshop will typically last 2 hours.</p>
-        <p>MathsWorld has something to offer visitors of all ages, but we have designed most exhibits to be especially interesting for years 4–9.</p>
-        <p>All the exhibits have an associated set of activities and follow on resources for you to use in the classroom after your visit. <a href={'https://www.mathsworlduk.com/exhibits/'} target={'_blank'}>Learn more…</a></p>
+        <p>MathsWorld has something to offer students of all ages. All the exhibits have an associated set of activities and follow on resources for you to use in the classroom after your visit.</p>
+        {/* <a href={'https://www.mathsworlduk.com/exhibits/'} target={'_blank'}>Learn more…</a> */}
       </section>
 
       <section id="group-visits">
