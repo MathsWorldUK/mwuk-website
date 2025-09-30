@@ -1,0 +1,45 @@
+.animal {
+  position: relative;
+  background: white;
+  border: 3px solid #aaa;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background .2s, opacity .2s;
+
+  img {
+    display: block;
+    border-radius: 8px;
+    mix-blend-mode: multiply;
+    /* @media (prefers-color-scheme: dark) {
+      filter: invert(1);
+      mix-blend-mode: screen;
+    } */
+  }
+
+  .checkbox {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border: 2px solid #aaa;
+    border-radius: 20px;
+  }
+
+  &.checked {
+    background: #aaa;
+    opacity: 0.5;
+  }
+
+  &.checked .checkbox {
+    background: white;
+    border-color: white;
+    color: #aaa;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 16px;
+    &:after { content: '✓'; }
+  }
+}

@@ -1,4 +1,5 @@
 :root {
+  color-scheme: light only;
   --background: #FFF;
   --foreground: #171717;
   --p1: #03BEED;
@@ -31,6 +32,9 @@ body {
   background-image: url('/images/penrose.svg'), linear-gradient(to bottom, color-mix(in srgb, var(--bg-gradient, var(--p1)) 60%, transparent) 0, transparent 720px);
   background-repeat: repeat, no-repeat;
   font-family: var(--font-ubuntu), Helvetica, sans-serif;
+  /* @media (prefers-color-scheme: dark) {
+    background-image: url('/images/penrose-dark.svg'), linear-gradient(to bottom, color-mix(in srgb, var(--bg-gradient, var(--p1)) 60%, transparent) 0, transparent 720px);
+  } */
 }
 
 main {
