@@ -32,9 +32,5 @@ export default function Home() {
       <p>Mathematics has beauty and romance. It’s not a boring place to be, the mathematical world. It’s an extraordinary place; it’s worth spending time there.</p>
       <p>– Marcus du Sautoy, British mathematician</p>
     </blockquote>
-
-
-
-
   </div>);
 }
