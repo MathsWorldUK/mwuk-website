@@ -22,6 +22,8 @@ export const GET_EVENT_BY_ID = gql`
       title
       slug
       description
+      audience
+      tickets
       date
       image {
         url

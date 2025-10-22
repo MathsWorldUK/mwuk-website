@@ -1,0 +1,84 @@
+.return {
+
+}
+
+.card {
+  background: white;
+  border-radius: 8px;
+  width: 250px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  height: 180px;
+  position: relative;
+  overflow: hidden;
+  background: #aaa linear-gradient(to bottom right, #445, #001) center;
+  background-size: cover;
+  border-radius: 8px 8px 0 0;
+}
+
+.content {
+  padding: 10px 16px;
+}
+
+.content h2 {
+  font-size: 1.2rem;
+  margin: 0;
+  color: #333;
+}
+
+.meta {
+  font-size: 0.9rem;
+  color: #666;
+  margin: .2rem 0 0 0;
+}
+
+.backLink {
+  display: block;
+  width: fit-content;
+  margin: 52px -12px -52px;
+  padding: 2px 12px;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  transition: background .2s;
+  svg { margin: 0 3px -5px 0; }
+  &:hover, &:focus { background: rgba(0, 0, 0, 0.15); }
+}
+
+.properties {
+  padding-bottom: 8px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  margin-bottom: 16px;
+  > div { margin: 0 0 8px; }
+  svg { margin: 0 6px -4px 0; }
+}
+
+.btn {
+  background: var(--p1);
+  color: white;
+  border-radius: 20px;
+  padding: 7px 18px;
+  display: block;
+  width: fit-content;
+  font-weight: bold;
+  transition: background .2s;
+  cursor: pointer;
+  svg { fill: white; margin:0 4px -5px 0; }
+  &:hover, &:focus { background: color-mix(in srgb, var(--p1) 60%, black); }
+}
+
+.leftThumb {
+  position: sticky;
+  top: 8px;
+  border-radius: 8px;
+}

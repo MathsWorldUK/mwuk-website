@@ -1,0 +1,25 @@
+.supportType {
+  background: linear-gradient(to bottom right, var(--p1), var(--p5));
+  color: white;
+  padding: 1rem 1.5rem 1.5rem;
+  border-radius: 12px;
+
+  button {
+    display: block;
+    background: white;
+    color: var(--p5);
+    font: inherit;
+    border: none;
+    margin: 1.5rem auto;
+    border-radius: 20px;
+    padding: 0.2rem 1rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  &:nth-child(2) {
+    background: linear-gradient(to bottom right, var(--p3), var(--p2));
+    button { color: var(--p2); }
+  }
+}
