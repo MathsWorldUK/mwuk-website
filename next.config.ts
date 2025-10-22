@@ -7,7 +7,10 @@ const nextConfig: NextConfig = {
       use: ["@svgr/webpack"]
     });
     return config;
-  }
+  },
+  images: {
+    remotePatterns: [new URL('https://www.datocms-assets.com/**')],
+  },
 };
 
 export default nextConfig;
