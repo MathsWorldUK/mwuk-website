@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import styles from './footer.module.css';
 import Image from 'next/image'
 
@@ -14,7 +15,9 @@ const SPONSORS = [
 
 export function Footer() {
   return (<footer className={styles.footer}>
-    <p>© <a href={'https://www.mathsworlduk.com'} target={'_blank'}>MathsWorldUK</a>, registered in England and Wales as a charity (number 1155010) and a company (number 8370409). Visit our other museum, <a href={'https://mathscity.co.uk'} target={'_blank'}>MathsCity Leeds</a>.</p>
+    <p>© <a href={'https://www.mathsworlduk.com'} target={'_blank'}>MathsWorldUK</a> &nbsp;•&nbsp; Visit our other location, <a href={'https://mathscity.co.uk'} target={'_blank'}>MathsCity Leeds</a><br/>
+    Registered in England and Wales as charity number 1155010 and company number 8370409.<br/>
+    <Link href='/terms'>Website Terms and Conditions</Link></p>
     <p>MathsWorld London is generously supported by</p>
     <div className={styles.sponsors}>
       {SPONSORS.map(s => <a href={s.link} key={s.id}><Image src={`/images/sponsors/${s.id}.png`} alt={s.name} width={72} height={72}/></a>)}

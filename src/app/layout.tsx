@@ -34,7 +34,6 @@ export default function Layout({children}: Readonly<{children: React.ReactNode}>
   return (
     <html lang="en">
     <body className={`${ubuntu.variable}`}>
-      <div className={'banner'}>Opening in Autumn 2025</div>
       <Header/>
       <main>
         {children}
