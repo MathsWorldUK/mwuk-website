@@ -40,6 +40,11 @@ const ANIMALS = [
   'zebra',
 ];
 
+function toTitleCase(str: string) {
+  return str.replace('-', ' ')
+    .replace(/\w\S*/g, t => t.charAt(0).toUpperCase() + t.substring(1))
+}
+
 export default function Events() {
   const [checkedAnimals, setCheckedAnimals] = useState<Set<string>>(new Set());
 
@@ -72,6 +77,7 @@ export default function Events() {
             width={150}
             height={150}
           />
+          <div className={styles.title}>{toTitleCase(animal)}</div>
           <div className={styles.checkbox}></div>
         </div>
       ))}

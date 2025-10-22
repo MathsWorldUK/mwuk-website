@@ -42,4 +42,10 @@
     line-height: 16px;
     &:after { content: '✓'; }
   }
+
+  .title {
+    text-align: center;
+    margin: -20px 0 5px;
+    font-weight: bold;
+  }
 }
