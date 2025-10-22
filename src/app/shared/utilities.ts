@@ -1,9 +1,9 @@
 import markdownit from 'markdown-it';
 
 const md = markdownit();
-export function markdown(markdown: string) {
+export function markdown(markdown?: string) {
   try {
-    return md.render(markdown.trim());
+    return md.render((markdown || '').trim());
   } catch (error) {
     console.error('Error parsing markdown:', error);
     return '';

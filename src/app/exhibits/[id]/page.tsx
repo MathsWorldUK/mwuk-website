@@ -3,10 +3,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {getExhibit, getExhibits} from '@/lib/datocms';
 import styles from '../../shared/tiles.module.css';
-import markdownit from 'markdown-it';
-
-
-const md = markdownit()
+import ExhibitTabs from './tabs';
 
 interface ExhibitPageProps {
   params: Promise<{ id: string }>;
@@ -43,7 +40,7 @@ export default async function ExhibitDetail({ params }: ExhibitPageProps) {
           />
         </div>
         <div className={'grow'}>
-          <div className={'md'} dangerouslySetInnerHTML={{ __html: md.render(exhibit.description) }}/>
+          <ExhibitTabs exhibit={exhibit}/>
         </div>
       </div>
     </div>

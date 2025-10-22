@@ -1,0 +1,32 @@
+.tabBar {
+  display: flex;
+  gap: 16px;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.2);
+  margin: -8px 0 20px;
+
+  button {
+    font-weight: bold;
+    white-space: nowrap;
+    padding: 8px 2px;
+    color: #999;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    transition: color 0.2s, border-color 0.2s;
+    &:hover, &:focus { color: #333; }
+    &.active { color: var(--p2); border-bottom-color: var(--p2); }
+  }
+}
+
+.tasks {
+  margin: 24px 0 1.5rem;
+  > * {
+    --bg: var(--p3);
+    padding: 10px 12px 10px 42px;
+    background: color-mix(in srgb, var(--bg) 25%, transparent);
+    margin-bottom: 2px;
+    position: relative;
+  }
+  > :first-child { border-radius: 12px 12px 0 0; --bg: var(--p4); }
+  > :last-child { border-radius: 0 0 12px 12px; --bg: var(--p2); }
+  svg { position: absolute; left: 10px; top: 10px; }
+}

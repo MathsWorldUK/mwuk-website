@@ -2,7 +2,7 @@ import { gql } from 'graphql-request';
 
 export const GET_ALL_EVENTS = gql`
   query GetAllEvents {
-    allEvents(orderBy: date_ASC) {
+    allEvents(first: 200, orderBy: date_ASC) {
       title
       slug
       date
@@ -37,7 +37,7 @@ export const GET_EVENT_BY_ID = gql`
 
 export const GET_ALL_EXHIBITS = gql`
   query GetAllExhibits {
-    allExhibits {
+    allExhibits(first: 200) {
       slug
       title
       london

@@ -46,13 +46,14 @@
 .backLink {
   display: block;
   width: fit-content;
-  margin: 52px -12px -52px;
+  margin: 32px auto -44px;
   padding: 2px 12px;
   border-radius: 20px;
   font-size: 1.2rem;
-  transition: background .2s;
+  opacity: 0.6;
+  transition: opacity .2s, background .2s;
   svg { margin: 0 3px -5px 0; }
-  &:hover, &:focus { background: rgba(0, 0, 0, 0.15); }
+  &:hover, &:focus { opacity: 1; background: rgba(0, 0, 0, 0.15); }
 }
 
 .properties {
@@ -72,13 +73,12 @@
   width: fit-content;
   font-weight: bold;
   transition: background .2s;
-  cursor: pointer;
   svg { fill: white; margin:0 4px -5px 0; }
   &:hover, &:focus { background: color-mix(in srgb, var(--p1) 60%, black); }
 }
 
 .leftThumb {
   position: sticky;
-  top: 8px;
-  border-radius: 8px;
+  top: 20px;
+  border-radius: 12px;
 }

@@ -19,13 +19,13 @@ export interface DatoExhibit {
   description: string;
   london: boolean;
   leeds: boolean;
-  task_easy: string;
-  task_intermediate: string;
-  task_advanced: string;
+  taskEasy: string;
+  taskIntermediate: string;
+  taskAdvanced: string;
   history: string;
   people: string;
   applications: string;
-  maths_at_home: string;
+  mathsAtHome: string;
   images: Array<{
     url: string;
     alt?: string;
