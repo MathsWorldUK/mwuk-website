@@ -2,6 +2,7 @@ import {Ubuntu} from "next/font/google";
 import {Header} from './shared/header';
 import {Footer} from './shared/footer';
 import type {Metadata} from 'next'
+import {Analytics} from "@vercel/analytics/next"
 
 import "./globals.css";
 
@@ -39,6 +40,7 @@ export default function Layout({children}: Readonly<{children: React.ReactNode}>
         {children}
       </main>
       <Footer/>
+      <Analytics/>
     </body>
     </html>);
 }

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@types/markdown-it": "^14.1.2",
+    "@vercel/analytics": "^1.5.0",
     "datocms-client": "^3.5.24",
     "graphql": "^16.11.0",
     "graphql-request": "^7.2.0",
