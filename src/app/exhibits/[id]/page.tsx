@@ -32,7 +32,7 @@ export default async function ExhibitDetail({ params }: ExhibitPageProps) {
         <div style={{width: '240px'}}>
           <Image
             className={styles.leftThumb}
-            src={exhibit.images[0]?.url}
+            src={exhibit.images[0]?.url || ''}
             alt={exhibit.images[0]?.alt || ''}
             width="240"
             height="240"

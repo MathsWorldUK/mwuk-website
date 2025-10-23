@@ -36,8 +36,8 @@ export default async function EventDetail({ params }: EventPageProps) {
         <div style={{width: '240px'}}>
           <Image
             className={styles.leftThumb}
-            src={event.image!.url}
-            alt={event.image!.alt || event.title}
+            src={event.image?.url || ''}
+            alt={event.image?.alt || event.title}
             width="240"
             height="240"
             priority
