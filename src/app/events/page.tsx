@@ -7,7 +7,7 @@ export default async function Events() {
   const limit = Date.now() - 1000 * 60 * 60 * 24;
   const events = (await getEvents())
     .filter(event => +new Date(event.date) >= limit)
-    .sort((a, b) => +new Date(a.date) - +new Date(b.date));
+    .sort((a, b) => +new Date(b.date) - +new Date(a.date));
 
   return (
     <div>
