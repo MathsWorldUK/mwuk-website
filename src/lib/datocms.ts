@@ -23,12 +23,12 @@ export async function getEvents(): Promise<DatoEvent[]> {
   }
 }
 
-export async function getEvent(id: string): Promise<DatoEvent | undefined> {
+export async function getEvent(slug: string): Promise<DatoEvent | undefined> {
   try {
-    const data = await datoClient.request<{event: DatoEvent}>(GET_EVENT_BY_ID, {id});
+    const data = await datoClient.request<{event: DatoEvent}>(GET_EVENT_BY_ID, {slug});
     return data.event;
   } catch (error) {
-    console.error(`Error fetching event ${id} from DatoCMS:`, error);
+    console.error(`Error fetching event ${slug} from DatoCMS:`, error);
   }
 }
 

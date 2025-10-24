@@ -4,7 +4,7 @@ import {getEvents} from '@/lib/datocms';
 import styles from '../shared/tiles.module.css';
 
 export default async function Events() {
-  const limit = Date.now() + 1000 * 60 * 60 * 12;
+  const limit = Date.now() - 1000 * 60 * 60 * 24;
   const events = (await getEvents())
     .filter(event => +new Date(event.date) >= limit)
     .sort((a, b) => +new Date(a.date) - +new Date(b.date));
@@ -27,7 +27,7 @@ export default async function Events() {
               <div className={styles.image} style={{backgroundImage: event.image ? `url(${event.image.url})` : ''}}></div>
               <div className={styles.content}>
                 <h2>{event.title}</h2>
-                <p className={styles.meta}>{formatDate(event.date)}</p>
+                <p className={styles.meta}>{formatDate(event)}</p>
               </div>
             </Link>
           ))}

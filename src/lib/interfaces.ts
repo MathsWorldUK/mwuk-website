@@ -3,6 +3,7 @@ export interface DatoEvent {
   title: string;
   description: string;
   date: string;
+  endDate: string;
   audience?: string;
   tickets?: string;
   image?: {

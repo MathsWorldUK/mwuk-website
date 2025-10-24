@@ -6,6 +6,7 @@ export const GET_ALL_EVENTS = gql`
       title
       slug
       date
+      endDate
       image {
         url
         alt
@@ -25,6 +26,7 @@ export const GET_EVENT_BY_ID = gql`
       audience
       tickets
       date
+      endDate
       image {
         url
         alt

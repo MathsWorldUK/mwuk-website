@@ -81,4 +81,5 @@
   position: sticky;
   top: 20px;
   border-radius: 12px;
+  background: #aaa linear-gradient(to bottom right, #445, #001) center;
 }

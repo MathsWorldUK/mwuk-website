@@ -48,7 +48,7 @@ export default async function EventDetail({ params }: EventPageProps) {
             <div>
               <CalendarIcon/>
               <time dateTime={event.date} className={styles.eventMeta}>
-                {formatDate(event.date)}
+                {formatDate(event)}
               </time>
             </div>
             {event.audience ? (
@@ -60,7 +60,7 @@ export default async function EventDetail({ params }: EventPageProps) {
           </div>
           <div dangerouslySetInnerHTML={{__html: markdown(event.description)}}/>
           {event.tickets ? (
-            <a className={styles.btn} href={event.tickets}><TicketIcon/> Get Tickets</a>
+            <a className={styles.btn} href={event.tickets} target={"_blank"}><TicketIcon/> Get Tickets</a>
           ) : <></>}
         </div>
       </div>
