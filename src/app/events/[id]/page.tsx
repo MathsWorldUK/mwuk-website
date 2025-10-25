@@ -9,8 +9,10 @@ import BackIcon from '@/app/shared/icons/back.svg';
 import TicketIcon from '@/app/shared/icons/tickets.svg';
 
 interface EventPageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{id: string}>;
 }
+
+export const revalidate = 300;  // 5 minutes
 
 export async function generateStaticParams() {
   try {
@@ -21,8 +23,8 @@ export async function generateStaticParams() {
   }
 }
 
-export default async function EventDetail({ params }: EventPageProps) {
-  const { id } = await params;
+export default async function EventDetail({params}: EventPageProps) {
+  const {id} = await params;
   const event = await getEvent(id);
   if (!event) return <div></div>;
 

@@ -76,3 +76,16 @@ export const GET_EXHIBIT_BY_ID = gql`
     }
   }
 `;
+
+export const GET_VISIT = gql`
+  query GetAllVisits {
+    visit {
+      openingHours
+      directions
+      ticketPrices
+      accessibility
+      schoolVisits
+      groupVisits
+    }
+  }
+`;

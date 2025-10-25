@@ -1,5 +1,5 @@
-import {DatoEvent, DatoExhibit} from '@/lib/interfaces';
-import {GET_ALL_EVENTS, GET_ALL_EXHIBITS, GET_EVENT_BY_ID, GET_EXHIBIT_BY_ID} from '@/lib/queries';
+import {DatoEvent, DatoExhibit, DatoVisit} from '@/lib/interfaces';
+import {GET_ALL_EVENTS, GET_ALL_EXHIBITS, GET_EVENT_BY_ID, GET_EXHIBIT_BY_ID, GET_VISIT} from '@/lib/queries';
 import { GraphQLClient } from 'graphql-request';
 
 const token = process.env.DATOCMS_API_TOKEN;
@@ -49,5 +49,14 @@ export async function getExhibit(slug: string): Promise<DatoExhibit | undefined>
     return data.exhibit;
   } catch (error) {
     console.error(`Error fetching exhibit ${slug} from DatoCMS:`, error);
+  }
+}
+
+export async function getVisit(): Promise<DatoVisit | undefined> {
+  try {
+    const data = await datoClient.request<{visit: DatoVisit}>(GET_VISIT);
+    return data.visit;
+  } catch (error) {
+    console.error(`Error fetching visit from DatoCMS:`, error);
   }
 }

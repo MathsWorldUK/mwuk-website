@@ -3,6 +3,8 @@ import Link from 'next/link';
 import {getEvents} from '@/lib/datocms';
 import styles from '../shared/tiles.module.css';
 
+export const revalidate = 300;  // 5 minutes
+
 export default async function Events() {
   const limit = Date.now() - 1000 * 60 * 60 * 24;
   const events = (await getEvents())

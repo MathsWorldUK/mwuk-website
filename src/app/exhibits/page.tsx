@@ -2,6 +2,8 @@ import Link from 'next/link';
 import {getExhibits} from '@/lib/datocms';
 import styles from '../shared/tiles.module.css';
 
+export const revalidate = 300;  // 5 minutes
+
 export default async function Exhibits() {
   const exhibits = (await getExhibits())
     .filter(exhibit => exhibit.london)

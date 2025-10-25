@@ -6,8 +6,10 @@ import styles from '../../shared/tiles.module.css';
 import ExhibitTabs from './tabs';
 
 interface ExhibitPageProps {
-  params: Promise<{ id: string }>;
+  params: Promise<{id: string}>;
 }
+
+export const revalidate = 300;  // 5 minutes
 
 export async function generateStaticParams() {
   try {
@@ -18,8 +20,8 @@ export async function generateStaticParams() {
   }
 }
 
-export default async function ExhibitDetail({ params }: ExhibitPageProps) {
-  const { id } = await params;
+export default async function ExhibitDetail({params}: ExhibitPageProps) {
+  const {id} = await params;
   const exhibit = await getExhibit(id);
   if (!exhibit) return <div></div>;
 

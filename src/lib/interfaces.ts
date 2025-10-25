@@ -34,3 +34,12 @@ export interface DatoExhibit {
     height: number;
   }>;
 }
+
+export interface DatoVisit {
+  openingHours: string;
+  directions: string;
+  ticketPrices: string;
+  accessibility: string;
+  schoolVisits: string;
+  groupVisits: string;
+}
