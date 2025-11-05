@@ -1,10 +1,27 @@
 .supportType {
   background: linear-gradient(to bottom right, var(--p1), var(--p5));
   color: white;
-  padding: 1rem 1.5rem 1.5rem;
+  padding: 1rem 1.2rem 1.5rem;
   border-radius: 12px;
+  align-self: flex-start;
+  font-size: 1rem;
 
-  button {
+  h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  p {
+    font-weight: bold;
+    text-align: center;
+    font-size: 1rem;
+    margin: -12px 0 14px;
+  }
+
+  ul { margin-left: 1rem; }
+
+  a {
     display: block;
     background: white;
     color: var(--p5);
@@ -16,10 +33,17 @@
     font-weight: bold;
     font-size: 1.2rem;
     cursor: pointer;
+    width: fit-content;
+    span { font-size: 0.8rem; }
   }
 
   &:nth-child(2) {
     background: linear-gradient(to bottom right, var(--p3), var(--p2));
-    button { color: var(--p2); }
+    a { color: var(--p2); }
+  }
+
+  &:nth-child(3) {
+    background: linear-gradient(to bottom right, var(--p4), var(--p1));
+    a { color: var(--p1); }
   }
 }
