@@ -8,7 +8,10 @@ export const revalidate = 300;  // 5 minutes
 export default async function Events() {
   const limit = Date.now() - 1000 * 60 * 60 * 24;
   const events = (await getEvents())
-    .filter(event => +new Date(event.date) >= limit)
+    .filter(event => {
+      const date = new Date(event.endDate || event.date);
+      return +date >= limit
+    })
     .sort((a, b) => +new Date(b.date) - +new Date(a.date));
 
   return (

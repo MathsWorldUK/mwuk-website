@@ -13,7 +13,7 @@ const ubuntu = Ubuntu({
 });
 
 export const metadata: Metadata = {
-  description: 'MathsWorld is an interactive museum in London with innovative hands-on exhibits that explore the beauty, wonder, and everyday relevance of mathematics for visitors of all ages.',
+  description: 'MathsWorld is an interactive discovery centre in London with innovative hands-on exhibits that explore the beauty, wonder, and everyday relevance of mathematics for visitors of all ages.',
   // openGraph: {
   //   type: "website",
   //   url: "https://example.com",

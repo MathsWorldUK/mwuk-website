@@ -42,7 +42,7 @@ export default function Home() {
       </div>
       <div className={styles.quote}>
         “Absolutely wonderful space. [The kids] spent hours immersed in the activities”
-        <span>Nelly, teacher</span>
+        <span>Nelly</span>
       </div>
     </div>
     <Image src={'/images/banners/puzzles.jpg'} className={'hero'} alt={''} width={820} height={200}/>

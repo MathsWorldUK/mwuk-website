@@ -11,16 +11,17 @@
 
   nav {
     display: flex;
-    gap: 1rem;
+    gap: 10px;
     font-weight: bold;
     color: var(--p2);
 
     a {
       border-radius: 6px;
-      font-size: 0.9rem;
-      width: 72px;
+      font-size: 13px;
+      line-height: 18px;
+      width: 64px;
       text-align: center;
-      padding: 8px 0;
+      padding: 10px 0;
       position: relative;
       transition: background .2s, color .2s;
       background: rgba(255, 255, 255, 0.4);
@@ -39,8 +40,8 @@
     svg.icon {
       display: block;
       margin: 0 auto;
-      width: 32px;
-      height: 32px;
+      width: 26px;
+      height: 26px;
       fill: currentColor;
     }
   }

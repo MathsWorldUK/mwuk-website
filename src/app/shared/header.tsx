@@ -6,6 +6,7 @@ import DonateIcon from './icons/donate.svg';
 import EventsIcon from './icons/events.svg';
 import TicketsIcon from './icons/tickets.svg';
 import VisitIcon from './icons/visit.svg';
+import ExhibitsIcon from './icons/exhibits.svg';
 
 export function Header() {
   return (<header className={styles.header}>
@@ -18,6 +19,10 @@ export function Header() {
       <Link href="/events">
         <EventsIcon className={styles.icon}/>
         <span>Events</span>
+      </Link>
+      <Link href="/exhibits">
+        <ExhibitsIcon className={styles.icon}/>
+        <span>Exhibits</span>
       </Link>
       <Link href="/support">
         <DonateIcon className={styles.icon}/>
