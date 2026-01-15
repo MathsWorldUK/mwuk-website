@@ -6,7 +6,7 @@ const SPONSORS = [
   {id: 'aitt', name: 'Association of Information Technology Trust', link: ''},
   {id: 'ben-delo', name: 'Ben Delo Foundation', link: ''},
   {id: 'civa', name: 'CIVA', link: ''},
-  {id: 'g-research', name: 'G Research', link: 'https://www.gresearch.com'},
+  {id: 'g-research1', name: 'G Research', link: 'https://www.gresearch.com'},
   // {id: 'mathigon', name: 'Mathigon', link: 'https://mathigon.org'},
   {id: 'open', name: 'The Open University', link: 'https://www.open.ac.uk'},
   {id: 'qrt', name: 'Qube Research & Technologies', link: 'https://www.qube-rt.com'},
