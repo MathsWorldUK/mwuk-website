@@ -37,7 +37,8 @@ export default function Layout({children}: Readonly<{children: React.ReactNode}>
   return (
     <html lang="en">
       <body className={`${ubuntu.variable}`}>
-        <SiteSwitch />
+      {/* TODO Show site switcher! */}
+      {/* <SiteSwitch /> */}
         <Header
           logo={'/images/logo.svg'}
           logoAlt={'MathsWorld London'}
