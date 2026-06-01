@@ -1,25 +1,19 @@
-## MathsWorld London Website
+## MathsWorld Website
 
-Install dependencies with `npm install`, then run the development server with `npm run dev` and
-open [http://localhost:3000](http://localhost:3000) to preview.
+Thsi repo contains the mathsworld.com website for the museum in London, and the charity.mathsworld.com website for shared charity content.
+
+Install dependencies with `npm install`, then run the development server with `npm run dev`.
 
 ### TODO List
 
-- [ ] Dark mode support.
-- [ ] Write "Support" and "Events" pages and review "Visit" content.
-- [ ] Twitter and Open Graph metadata.
 
-After domain purchase:
+Before public release:
+- [ ] Review text and deploy new website
+- [ ] Redirect old website
+- [ ] Add switcher banner and link donate page from London
+- [ ] Update Leeds and ticket purchase websites
 
-- [ ] Transfer to namecheap. Change DNS in Vercel.
+Later updates:
+- [ ] Dark mode support
+- [ ] Twitter and Open Graph metadata
 - [ ] Switch domain and then add Google Site Verification
-
-After opening:
-
-- [ ] Remove top banner and enable ticket purchase link.
-- [ ] Add testimonials, reviews and awards to homepage.
-
-Marketing:
-
-- [ ] Google Business Profile
-- [ ] Facebook, BlueSky and Instagram accounts
