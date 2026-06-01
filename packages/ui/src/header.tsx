@@ -7,37 +7,38 @@ import EventsIcon from './icons/events.svg';
 import TicketsIcon from './icons/tickets.svg';
 import VisitIcon from './icons/visit.svg';
 import ExhibitsIcon from './icons/exhibits.svg';
+import GalleryIcon from './icons/gallery.svg';
+import AboutIcon from './icons/about.svg';
 
-export function Header() {
+const ICONS = {
+  visit: <VisitIcon />,
+  events: <EventsIcon />,
+  tickets: <TicketsIcon />,
+  exhibits: <ExhibitsIcon />,
+  donate: <DonateIcon />,
+  gallery: <GalleryIcon />,
+  about: <AboutIcon />,
+};
+
+interface HeaderProps {
+  logo: string;
+  logoAlt: string;
+  links: {url: string; title: string; icon: keyof typeof ICONS; special?: boolean}[];
+}
+
+export function Header(props: HeaderProps) {
   return (
     <header className={styles.header}>
       <Link className={styles.logo} href="/">
-        <Image src={`/images/logo.svg`} width={340} height={100} alt={`MathsWorld`} />
+        <Image src={props.logo} width={340} height={100} alt={props.logoAlt} />
       </Link>
       <nav>
-        <Link href="/visit">
-          <VisitIcon className={styles.icon} />
-          <span>Visit</span>
-        </Link>
-        <Link href="/events">
-          <EventsIcon className={styles.icon} />
-          <span>Events</span>
-        </Link>
-        <Link href="/exhibits">
-          <ExhibitsIcon className={styles.icon} />
-          <span>Exhibits</span>
-        </Link>
-        <Link href="/support">
-          <DonateIcon className={styles.icon} />
-          <span>Support</span>
-        </Link>
-        <a
-          className={styles.tickets}
-          href={'https://mathscity.digitickets.co.uk/tickets?branches.branchID=3679'}
-          target={'_blank'}>
-          <TicketsIcon className={styles.icon} />
-          <span>Tickets</span>
-        </a>
+        {props.links.map((link, i) => (
+          <Link href={link.url} key={i} className={link.special ? styles.tickets : ''} target={link.special ? '_blank' : undefined}>
+            {ICONS[link.icon]}
+            <span>{link.title}</span>
+          </Link>
+        ))}
       </nav>
     </header>
   );

@@ -1,0 +1,9 @@
+:root {
+  --p1: #0A89E6;
+  --p2: #E2176D;
+  --p3: #FFB700;
+  --p4: #8ED927;
+  --p5: #A74DF0;
+  --bg-gradient: var(--p3);
+  --nav-color: var(--p1);
+}

@@ -13,7 +13,7 @@
     display: flex;
     gap: 10px;
     font-weight: bold;
-    color: var(--p2);
+    color: var(--nav-color);
 
     a {
       border-radius: 6px;
@@ -27,17 +27,17 @@
       background: rgba(255, 255, 255, 0.4);
 
       &:hover, &:focus {
-        background: var(--p2);
+        background: var(--nav-color);
         color: white;
       }
 
       &.tickets {
-        background: linear-gradient(60deg, var(--p2) 0, var(--p3) 200%);
+        background: linear-gradient(60deg, var(--nav-color) 0, var(--p3) 200%);
         color: white;
       }
     }
 
-    svg.icon {
+    svg {
       display: block;
       margin: 0 auto;
       width: 26px;

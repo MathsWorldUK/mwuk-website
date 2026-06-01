@@ -43,3 +43,23 @@ export interface DatoVisit {
   schoolVisits: string;
   groupVisits: string;
 }
+
+export interface DatoTrustee {
+  name: string;
+  role: string;
+  bio: string;
+  picture?: {
+    url: string;
+    alt?: string;
+    width: number;
+    height: number;
+  };
+}
+
+export interface DatoBlog {
+  slug: string;
+  title: string;
+  author: string;
+  datePublished: string;
+  body: string;
+}

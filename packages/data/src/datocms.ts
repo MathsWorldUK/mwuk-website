@@ -1,10 +1,13 @@
-import {DatoEvent, DatoExhibit, DatoVisit} from './interfaces';
+import {DatoEvent, DatoExhibit, DatoVisit, DatoTrustee, DatoBlog} from './interfaces';
 import {
   GET_ALL_EVENTS,
   GET_ALL_EXHIBITS,
   GET_EVENT_BY_ID,
   GET_EXHIBIT_BY_ID,
   GET_VISIT,
+  GET_ALL_TRUSTEES,
+  GET_ALL_BLOGS,
+  GET_BLOG_BY_SLUG,
 } from './queries';
 import {GraphQLClient} from 'graphql-request';
 
@@ -63,5 +66,34 @@ export async function getVisit(): Promise<DatoVisit | undefined> {
     return data.visit;
   } catch (error) {
     console.error(`Error fetching visit from DatoCMS:`, error);
+  }
+}
+
+export async function getTrustees(): Promise<DatoTrustee[]> {
+  try {
+    const data = await datoClient.request<{allTrustees: DatoTrustee[]}>(GET_ALL_TRUSTEES);
+    return data.allTrustees.sort((a, b) => a.name.split(' ')[1]!.localeCompare(b.name.split(' ')[1]!));
+  } catch (error) {
+    console.error('Error fetching trustees from DatoCMS:', error);
+    return [];
+  }
+}
+
+export async function getBlogs(): Promise<DatoBlog[]> {
+  try {
+    const data = await datoClient.request<{allBlogs: DatoBlog[]}>(GET_ALL_BLOGS);
+    return data.allBlogs;
+  } catch (error) {
+    console.error('Error fetching blogs from DatoCMS:', error);
+    return [];
+  }
+}
+
+export async function getBlog(slug: string): Promise<DatoBlog | undefined> {
+  try {
+    const data = await datoClient.request<{blog: DatoBlog}>(GET_BLOG_BY_SLUG, {slug});
+    return data.blog;
+  } catch (error) {
+    console.error(`Error fetching blog ${slug} from DatoCMS:`, error);
   }
 }

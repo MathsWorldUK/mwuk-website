@@ -1,16 +1,19 @@
 import {SiteSwitch} from '@repo/ui/site-switch';
-import {Ubuntu} from 'next/font/google';
+import {Ubuntu_Sans} from 'next/font/google';
 import {Header} from '@repo/ui/header';
 import {Footer} from '@repo/ui/footer';
 import type {Metadata} from 'next';
 import {Analytics} from '@vercel/analytics/next';
 
 import '@repo/ui/globals.css';
+import './globals.css';
 
-const ubuntu = Ubuntu({
+const ubuntu = Ubuntu_Sans({
   variable: '--font-ubuntu',
-  weight: ['400', '700'],
+  style: ['normal', 'italic'],
+  fallback: ['Helvetica', 'Arial', 'sans-serif'],
   subsets: ['latin'],
+  axes: ['wght', 'wdth'],
 });
 
 export const metadata: Metadata = {
@@ -42,20 +45,14 @@ export default function Layout({children}: Readonly<{children: React.ReactNode}>
           logo={'/images/logo.svg'}
           logoAlt={'MathsWorld London'}
           links={[
-            {title: 'Visit', icon: 'visit', url: '/visit'},
-            {title: 'Events', icon: 'events', url: '/events'},
-            {title: 'Exhibits', icon: 'exhibits', url: '/exhibits'},
-            {title: 'Support', icon: 'donate', url: '/support'},
-            {
-              title: 'Tickets',
-              icon: 'tickets',
-              url: 'https://mathscity.digitickets.co.uk/tickets?branches.branchID=3679',
-              special: true,
-            },
+            {title: 'About', icon: 'about', url: '/about'},
+            {title: 'Donate', icon: 'donate', url: '/support'},
+            {title: 'Gallery', icon: 'gallery', url: '/gallery'},
+            {title: 'Blog', icon: 'about', url: '/blog'},
           ]}
         />
         <main>{children}</main>
-        <Footer showSponsorLogos={true} />
+        <Footer showSponsorLogos={false} />
         <Analytics />
       </body>
     </html>

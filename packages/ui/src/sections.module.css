@@ -13,10 +13,10 @@
     @media screen and (max-width: 640px) { display: none; }
   }
 
-  nav button {
+  nav button, nav a {
+    display: block;
     background: color-mix(in srgb, var(--p1) 10%, transparent);
-    font-size: inherit;
-    font-family: inherit;
+    font: inherit;
     padding: .5rem .8rem;
     border-radius: 6px;
     margin-bottom: 12px;
@@ -35,5 +35,6 @@
 
   .body {
     flex-grow: 1;
+    & > *:first-child { margin-top: 0; }
   }
 }

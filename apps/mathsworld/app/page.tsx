@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className={styles.page}>
       <title>MathsWorld – London’s new Mathematics Discovery Centre</title>
-      <h1>
+      <h1 className={'fill'}>
         Explore! Discover! Solve!
         <br />
         <span>in London’s new mathematics discovery centre</span>

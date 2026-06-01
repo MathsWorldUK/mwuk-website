@@ -89,3 +89,42 @@ export const GET_VISIT = gql`
     }
   }
 `;
+
+export const GET_ALL_TRUSTEES = gql`
+  query GetAllTrustees {
+    allTrustees(first: 100) {
+      name
+      role
+      bio
+      picture {
+        url
+        alt
+        width
+        height
+      }
+    }
+  }
+`;
+
+export const GET_ALL_BLOGS = gql`
+  query GetAllBlogs {
+    allBlogs(first: 100, orderBy: datePublished_DESC) {
+      slug
+      title
+      author
+      datePublished
+    }
+  }
+`;
+
+export const GET_BLOG_BY_SLUG = gql`
+  query GetBlogBySlug($slug: String) {
+    blog(filter: {slug: {eq: $slug}}) {
+      slug
+      title
+      author
+      datePublished
+      body
+    }
+  }
+`;
