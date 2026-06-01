@@ -22,8 +22,8 @@ export default function StaffGrid({people}: StaffListProps) {
             onClick={() => setSelectedStaff(trustee)}
           >
             <Image
-              src={trustee.picture.url}
-              alt={trustee.picture.alt || trustee.name}
+              src={trustee.picture?.url || ''}
+              alt={trustee.picture?.alt || trustee.name}
               width={100}
               height={100}
               className={styles.avatarImage}
@@ -35,11 +35,11 @@ export default function StaffGrid({people}: StaffListProps) {
       </div>
 
       {selectedStaff && (
-        <div className={styles.modal} onClick={() => setselectedStaff(null)}>
+        <div className={styles.modal} onClick={() => setSelectedStaff(null)}>
           <div className={styles.modalContent} onClick={(e) => e.stopPropagation()}>
             <button
               className={styles.closeButton}
-              onClick={() => setselectedStaff(null)}
+              onClick={() => setSelectedStaff(null)}
               aria-label="Close"
             >
               ×

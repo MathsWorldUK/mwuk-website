@@ -13,7 +13,7 @@ const ubuntu = Ubuntu_Sans({
   style: ['normal', 'italic'],
   fallback: ['Helvetica', 'Arial', 'sans-serif'],
   subsets: ['latin'],
-  axes: ['wght', 'wdth'],
+  axes: ['wght', 'wdth'] as any,
 });
 
 export const metadata: Metadata = {
