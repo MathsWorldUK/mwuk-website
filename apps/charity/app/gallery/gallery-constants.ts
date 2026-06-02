@@ -1,7 +1,7 @@
 export const GALLERY_SECTIONS = [
   {slug: 'london', label: 'MathsWorld London'},
   {slug: 'leeds', label: 'MathsCity Leeds'},
-  {slug: 'city-of-maths', label: 'City of Maths'},
+  // {slug: 'city-of-maths', label: 'City of Maths'},
   {slug: 'big-bang-fair', label: 'Big Bang Fair'},
 ] as const;
 
