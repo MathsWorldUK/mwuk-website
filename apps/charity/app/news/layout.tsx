@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {getNews} from '@repo/data/datocms';
+import {getAllNews} from '@repo/data/datocms';
 import styles from '@repo/ui/sections.module.css';
 
 export default async function NewsLayout({children}: {children: React.ReactNode}) {
-  const news = await getNews();
+  const news = await getAllNews();
 
   return (
     <div>
