@@ -102,7 +102,7 @@ export default function Home() {
             before moving to a new location in 2025.
           </p>
         </a>
-        <a href={'https://mathsworld.com'} className={styles.project}>
+        <a href={'https://www.cityofmaths.co.uk'} className={styles.project}>
           <Image src={'/images/city.jpg'} className={'tile'} width={250} height={120} alt={''} />
           <h3>
             City of Maths <span>Leeds 2026</span>

@@ -8,13 +8,13 @@ Install dependencies with `npm install`, then run the development server with `n
 
 Before internal release: 
 - [ ] Finish about page with mission, ambassadors, team and trustees
-- [ ] Finish support page
-- [ ] Add gallery page
-- [ ] Add blog page
-- [ ] Update testimonials, reviews and awards
+- [ ] Finish support/donate page
+- [ ] Add blog/news page
 
 Before public release:
+- [ ] Update testimonials, reviews and awards
 - [ ] Check full mobile support
+- [ ] Contact form
 - [ ] Review all code and de-duplicate
 - [ ] Update favicons and logo
 - [ ] Run prettier and eslint
