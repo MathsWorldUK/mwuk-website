@@ -14,7 +14,7 @@ export default function StaffGrid({people}: StaffListProps) {
 
   return (
     <>
-      <div className={'row'}>
+      <div className={'row ' + styles.cardGrid}>
         {people.map((trustee) => (
           <button
             key={trustee.name}
