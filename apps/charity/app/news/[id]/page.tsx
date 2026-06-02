@@ -1,4 +1,4 @@
-import {getNews, getNews} from '@repo/data/datocms';
+import {getNews, getAllNews} from '@repo/data/datocms';
 import styles from './news.module.css';
 
 interface NewsPageProps {
@@ -9,7 +9,7 @@ export const revalidate = 300; // 5 minutes
 
 export async function generateStaticParams() {
   try {
-    return (await getNews()).map((news) => ({id: news.slug}));
+    return (await getAllNews()).map((news) => ({id: news.slug}));
   } catch (error) {
     console.error('Error fetching news for static params:', error);
     return [];

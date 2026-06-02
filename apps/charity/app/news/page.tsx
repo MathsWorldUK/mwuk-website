@@ -1,20 +1,14 @@
-import {getNews} from '@repo/data/datocms';
+import {getAllNews} from '@repo/data/datocms';
 import Link from 'next/link';
 
 export const revalidate = 300; // 5 minutes
 
 export default async function NewsIndex() {
-  const news = await getNews();
+  const news = await getAllNews();
 
   return (
     <div>
-      <h2>Welcome to the MathsWorld News</h2>
-      <p>
-        Explore the fascinating world of mathematics through our news posts. Discover stories,
-        insights, and updates about our exhibitions, events, and the mathematics that shapes our
-        world.
-      </p>
-
+      <h2>MathsWorld News</h2>
       {news.length > 0 ? (
         <div>
           <h3>Recent Posts</h3>
