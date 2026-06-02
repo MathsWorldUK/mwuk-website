@@ -1,14 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import {getBlogs} from '@repo/data/datocms';
+import {getNews} from '@repo/data/datocms';
 import styles from '@repo/ui/sections.module.css';
 
-export default async function BlogLayout({children}: {children: React.ReactNode}) {
-  const blogs = await getBlogs();
+export default async function NewsLayout({children}: {children: React.ReactNode}) {
+  const news = await getNews();
 
   return (
     <div>
-      <title>MathsWorld Blog</title>
+      <title>MathsWorld News</title>
       <Image
         src={'/images/banners/puzzles.jpg'}
         className={'hero'}
@@ -16,13 +16,13 @@ export default async function BlogLayout({children}: {children: React.ReactNode}
         width={820}
         height={200}
       />
-      <h1 className={'fill'}>Blog</h1>
+      <h1 className={'fill'}>News</h1>
 
       <div className={styles.sections}>
         <nav>
-          {blogs.map((blog) => (
-            <Link key={blog.slug} href={`/blog/${blog.slug}`}>
-              {blog.title}
+          {news.map((news) => (
+            <Link key={news.slug} href={`/news/${news.slug}`}>
+              {news.title}
             </Link>
           ))}
         </nav>

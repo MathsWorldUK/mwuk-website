@@ -1,9 +1,15 @@
-export const revalidate = 300; // 5 minutes
+import {getAmbassador} from '@repo/data/datocms';
 
-export default function Ambassadors() {
+export const revalidate = 3600; // 1 hour
+
+export default async function Ambassadors() {
+  const ambassador = await getAmbassador();
+
   return (
     <div>
-      <p>TODO</p>
+      {ambassador?.bodyHtml && (
+        <div dangerouslySetInnerHTML={{__html: ambassador.bodyHtml}} />
+      )}
     </div>
   );
 }

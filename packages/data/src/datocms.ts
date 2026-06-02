@@ -1,4 +1,4 @@
-import {DatoEvent, DatoExhibit, DatoVisit, DatoTrustee, DatoBlog} from './interfaces';
+import {DatoEvent, DatoExhibit, DatoVisit, DatoTrustee, DatoNews, DatoAmbassador} from './interfaces';
 import {
   GET_ALL_EVENTS,
   GET_ALL_EXHIBITS,
@@ -6,10 +6,13 @@ import {
   GET_EXHIBIT_BY_ID,
   GET_VISIT,
   GET_ALL_TRUSTEES,
-  GET_ALL_BLOGS,
-  GET_BLOG_BY_SLUG,
+  GET_ALL_STAFF,
+  GET_ALL_NEWS,
+  GET_NEWS_BY_SLUG,
+  GET_AMBASSADOR,
 } from './queries';
 import {GraphQLClient} from 'graphql-request';
+import {structuredTextToHtml} from './utilities';
 
 const token = process.env.DATOCMS_API_TOKEN;
 if (!token) {
@@ -79,21 +82,53 @@ export async function getTrustees(): Promise<DatoTrustee[]> {
   }
 }
 
-export async function getBlogs(): Promise<DatoBlog[]> {
+export async function getStaff(): Promise<DatoTrustee[]> {
   try {
-    const data = await datoClient.request<{allBlogs: DatoBlog[]}>(GET_ALL_BLOGS);
-    return data.allBlogs;
+    const data = await datoClient.request<{allStaffs: DatoTrustee[]}>(GET_ALL_STAFF);
+    return data.allStaffs.sort((a, b) => a.name.split(' ')[1]!.localeCompare(b.name.split(' ')[1]!));
   } catch (error) {
-    console.error('Error fetching blogs from DatoCMS:', error);
+    console.error('Error fetching staff from DatoCMS:', error);
     return [];
   }
 }
 
-export async function getBlog(slug: string): Promise<DatoBlog | undefined> {
+export async function getAllNews(): Promise<DatoNews[]> {
   try {
-    const data = await datoClient.request<{blog: DatoBlog}>(GET_BLOG_BY_SLUG, {slug});
-    return data.blog;
+    const data = await datoClient.request<{allNews: DatoNews[]}>(GET_ALL_NEWS);
+    return data.allNews;
   } catch (error) {
-    console.error(`Error fetching blog ${slug} from DatoCMS:`, error);
+    console.error('Error fetching news from DatoCMS:', error);
+    return [];
+  }
+}
+
+export async function getNews(slug: string): Promise<DatoNews | undefined> {
+  try {
+    const data = await datoClient.request<{news: DatoNews}>(GET_NEWS_BY_SLUG, {slug});
+    return data.news;
+  } catch (error) {
+    console.error(`Error fetching news ${slug} from DatoCMS:`, error);
+  }
+}
+
+export async function getAmbassador(): Promise<DatoAmbassador | undefined> {
+  try {
+    const data = await datoClient.request<{
+      ambassador?: {
+        body?: {
+          value?: unknown;
+        };
+      };
+    }>(GET_AMBASSADOR);
+
+    if (!data.ambassador) {
+      return;
+    }
+
+    return {
+      bodyHtml: structuredTextToHtml(data.ambassador.body?.value),
+    };
+  } catch (error) {
+    console.error('Error fetching ambassador from DatoCMS:', error);
   }
 }

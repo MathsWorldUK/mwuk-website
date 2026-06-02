@@ -106,9 +106,25 @@ export const GET_ALL_TRUSTEES = gql`
   }
 `;
 
-export const GET_ALL_BLOGS = gql`
-  query GetAllBlogs {
-    allBlogs(first: 100, orderBy: datePublished_DESC) {
+export const GET_ALL_STAFF = gql`
+  query GetAllStaff {
+    allStaffs(first: 100) {
+      name
+      role
+      bio
+      picture {
+        url
+        alt
+        width
+        height
+      }
+    }
+  }
+`;
+
+export const GET_ALL_NEWS = gql`
+  query GetAllNews {
+    allNews(first: 100, orderBy: datePublished_DESC) {
       slug
       title
       author
@@ -117,9 +133,19 @@ export const GET_ALL_BLOGS = gql`
   }
 `;
 
-export const GET_BLOG_BY_SLUG = gql`
-  query GetBlogBySlug($slug: String) {
-    blog(filter: {slug: {eq: $slug}}) {
+export const GET_AMBASSADOR = gql`
+  query GetAmbassador {
+    ambassador {
+      body {
+        value
+      }
+    }
+  }
+`;
+
+export const GET_NEWS_BY_SLUG = gql`
+  query GetNewsBySlug($slug: String) {
+    news(filter: {slug: {eq: $slug}}) {
       slug
       title
       author

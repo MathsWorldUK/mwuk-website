@@ -56,10 +56,14 @@ export interface DatoTrustee {
   };
 }
 
-export interface DatoBlog {
+export interface DatoNews {
   slug: string;
   title: string;
   author: string;
   datePublished: string;
   body: string;
+}
+
+export interface DatoAmbassador {
+  bodyHtml: string;
 }

@@ -6,8 +6,18 @@ Install dependencies with `npm install`, then run the development server with `n
 
 ### TODO List
 
+Before internal release: 
+- [ ] Finish about page with mission, ambassadors, team and trustees
+- [ ] Finish support page
+- [ ] Add gallery page
+- [ ] Add blog page
+- [ ] Update testimonials, reviews and awards
 
 Before public release:
+- [ ] Check full mobile support
+- [ ] Review all code and de-duplicate
+- [ ] Update favicons and logo
+- [ ] Run prettier and eslint
 - [ ] Review text and deploy new website
 - [ ] Redirect old website
 - [ ] Add switcher banner and link donate page from London

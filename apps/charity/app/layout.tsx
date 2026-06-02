@@ -48,7 +48,7 @@ export default function Layout({children}: Readonly<{children: React.ReactNode}>
             {title: 'About', icon: 'about', url: '/about'},
             {title: 'Donate', icon: 'donate', url: '/support'},
             {title: 'Gallery', icon: 'gallery', url: '/gallery'},
-            {title: 'Blog', icon: 'about', url: '/blog'},
+            {title: 'News', icon: 'news', url: '/news'},
           ]}
         />
         <main>{children}</main>

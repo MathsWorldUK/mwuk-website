@@ -9,6 +9,7 @@ import VisitIcon from './icons/visit.svg';
 import ExhibitsIcon from './icons/exhibits.svg';
 import GalleryIcon from './icons/gallery.svg';
 import AboutIcon from './icons/about.svg';
+import NewsIcon from './icons/news.svg';
 
 const ICONS = {
   visit: <VisitIcon />,
@@ -18,6 +19,7 @@ const ICONS = {
   donate: <DonateIcon />,
   gallery: <GalleryIcon />,
   about: <AboutIcon />,
+  news: <NewsIcon />,
 };
 
 interface HeaderProps {
