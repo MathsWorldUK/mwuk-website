@@ -3,17 +3,18 @@
 import {useState, useEffect} from 'react';
 import styles from './sections.module.css';
 
-export default function Sections({children}: Readonly<{children: React.ReactNode}>) {
-  const [activeSection, setActiveSection] = useState('');
+type Section = {
+  id: string;
+  title: string;
+};
 
-  const sections = [
-    {id: 'opening-hours', title: 'Opening Hours'},
-    {id: 'directions', title: 'Directions'},
-    {id: 'ticket-prices', title: 'Ticket Prices'},
-    {id: 'accessibility', title: 'Accessibility'},
-    {id: 'school-visits', title: 'School Visits'},
-    {id: 'group-visits', title: 'Group Visits'},
-  ];
+type SectionsProps = Readonly<{
+  children: React.ReactNode;
+  sections: readonly Section[];
+}>;
+
+export default function Sections({children, sections}: SectionsProps) {
+  const [activeSection, setActiveSection] = useState('');
 
   useEffect(() => {
     const handleScroll = () => {
@@ -35,7 +36,7 @@ export default function Sections({children}: Readonly<{children: React.ReactNode
     handleScroll();
 
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [sections]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);

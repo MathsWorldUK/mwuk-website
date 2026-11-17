@@ -5,6 +5,15 @@ import Sections from '@repo/ui/sections';
 
 export const revalidate = 300; // 5 minutes
 
+const sections = [
+  {id: 'opening-hours', title: 'Opening Hours'},
+  {id: 'directions', title: 'Directions'},
+  {id: 'ticket-prices', title: 'Ticket Prices'},
+  {id: 'accessibility', title: 'Accessibility'},
+  {id: 'school-visits', title: 'School Visits'},
+  {id: 'group-visits', title: 'Group Visits'},
+];
+
 export default async function Visit() {
   const visit = await getVisit();
 
@@ -13,6 +22,7 @@ export default async function Visit() {
       <title>MathsWorld London – Visit Us</title>
       <Image
         src={'/images/banners/london1.jpg'}
+        loading="eager"
         className={'hero'}
         alt={''}
         width={820}
@@ -20,7 +30,7 @@ export default async function Visit() {
       />
       <h1>Plan Your Visit </h1>
 
-      <Sections>
+      <Sections sections={sections}>
         <section id="opening-hours">
           <h2 style={{marginTop: '0'}}>Opening Hours</h2>
           <div dangerouslySetInnerHTML={{__html: markdown(visit?.openingHours)}} />

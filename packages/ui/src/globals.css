@@ -84,7 +84,7 @@ main {
 h1 { line-height: 1.2; font-size: 2.8rem; text-align: center; margin: 2.5rem 0 3rem; }
 h2 { line-height: 1.2; font-size: 1.8rem; margin: 3rem 0 1.2rem; }
 p { line-height: 1.6; margin: 0 0 .8rem 0; }
-ul, ol { margin: 0 0 .8rem 2rem; }
+ul, ol { line-height: 1.6; margin: 0 0 .8rem 2rem; }
 li { margin: 0 0 .4rem 0; }
 
 h1, h2, h3, strong { font-weight: 750; }
@@ -116,6 +116,7 @@ h1.fill, h2.fill {
   justify-content: center;
   gap: 2rem;
   margin: 2rem 0;
+  img { max-width: 100%; }
   > .grow { flex-grow: 1; width: 200px; }
   > div > *:first-child { margin-top: 0; }
   > div > *:last-child { margin-bottom: 0; }

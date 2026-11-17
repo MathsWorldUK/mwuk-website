@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const SPONSORS = [
   {id: 'aitt', name: 'Association of Information Technology Trust', link: ''},
-  {id: 'ben-delo', name: 'Ben Delo Foundation', link: ''},
+  // {id: 'ben-delo', name: 'Ben Delo Foundation', link: ''},
   {id: 'civa', name: 'CIVA', link: ''},
   {id: 'g-research2', name: 'G Research', link: 'https://www.gresearch.com'},
   // {id: 'mathigon', name: 'Mathigon', link: 'https://mathigon.org'},
