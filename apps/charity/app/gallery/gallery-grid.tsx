@@ -64,7 +64,7 @@ export function GalleryGrid({images, title}: GalleryGridProps) {
     return <p className={styles.empty}>No photos available yet for this gallery.</p>;
   }
 
-  const selectedImage = activeIndex === null ? null : images[activeIndex] ?? null;
+  const selectedImage = activeIndex === null ? null : (images[activeIndex] ?? null);
 
   return (
     <>

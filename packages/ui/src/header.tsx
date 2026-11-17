@@ -36,7 +36,11 @@ export function Header(props: HeaderProps) {
       </Link>
       <nav>
         {props.links.map((link, i) => (
-          <Link href={link.url} key={i} className={link.special ? styles.tickets : ''} target={link.special ? '_blank' : undefined}>
+          <Link
+            href={link.url}
+            key={i}
+            className={link.special ? styles.tickets : ''}
+            target={link.special ? '_blank' : undefined}>
             {ICONS[link.icon]}
             <span>{link.title}</span>
           </Link>

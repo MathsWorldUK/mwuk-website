@@ -40,7 +40,9 @@ export async function getGalleryImages(slug: GallerySlug): Promise<GalleryImage[
     .filter((entry) => entry.isFile())
     .map((entry) => entry.name)
     .filter((fileName) => IMAGE_EXTENSIONS.has(path.extname(fileName).toLowerCase()))
-    .sort((left, right) => left.localeCompare(right, undefined, {numeric: true, sensitivity: 'base'}))
+    .sort((left, right) =>
+      left.localeCompare(right, undefined, {numeric: true, sensitivity: 'base'})
+    )
     .map((fileName) => ({
       src: `/images/gallery/${slug}/${encodeURIComponent(fileName)}`,
       alt: normalizeImageAlt(fileName),

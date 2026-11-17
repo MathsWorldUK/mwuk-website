@@ -3,7 +3,6 @@ import styles from '@repo/ui/sections.module.css';
 import {SidebarNav} from '@repo/ui/sidebar-nav';
 import {GALLERY_NAV_LINKS} from './gallery-constants';
 
-
 export default function GalleryLayout({children}: {children: React.ReactNode}) {
   return (
     <div>

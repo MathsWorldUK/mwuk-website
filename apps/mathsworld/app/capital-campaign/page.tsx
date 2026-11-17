@@ -27,7 +27,7 @@ const museums = [
     image: '/capital-campaign/mathematikum.jpg',
   },
   {name: 'MoMath', place: 'New York, 2012', image: '/capital-campaign/momath.jpg'},
-  {name: 'MMACA', place: 'Barcelona, 2014', image: '/capital-campaign/mmaca.jpeg'},
+  {name: 'MMACA', place: 'Barcelona, 2014', image: '/capital-campaign/mmaca.jpg'},
   {
     name: 'Maison Poincaré',
     place: 'Paris, 2023',
@@ -311,12 +311,7 @@ export default function CapitalCampaign() {
           </p>
 
           <figure>
-            <Image
-              src="/capital-campaign/map.svg"
-              width={640}
-              height={380}
-              alt={''}
-            />
+            <Image src="/capital-campaign/map.svg" width={640} height={380} alt={''} />
             <figcaption>Floor plan for illustrative purposes only.</figcaption>
           </figure>
 

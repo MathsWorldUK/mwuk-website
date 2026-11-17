@@ -6,12 +6,14 @@ Install dependencies with `npm install`, then run the development server with `n
 
 ### TODO List
 
-Before internal release: 
+Before internal release:
+
 - [ ] Finish about page with mission, ambassadors, team and trustees
 - [ ] Finish support/donate page
 - [ ] Add blog/news page
 
 Before public release:
+
 - [ ] Update testimonials, reviews and awards
 - [ ] Check full mobile support
 - [ ] Contact form
@@ -24,6 +26,7 @@ Before public release:
 - [ ] Update Leeds and ticket purchase websites
 
 Later updates:
+
 - [ ] Dark mode support
 - [ ] Twitter and Open Graph metadata
 - [ ] Switch domain and then add Google Site Verification

@@ -1,6 +1,13 @@
 import 'server-only';
 
-import {DatoEvent, DatoExhibit, DatoVisit, DatoTrustee, DatoNews, DatoAmbassador} from './interfaces';
+import {
+  DatoEvent,
+  DatoExhibit,
+  DatoVisit,
+  DatoTrustee,
+  DatoNews,
+  DatoAmbassador,
+} from './interfaces';
 import {
   GET_ALL_EVENTS,
   GET_ALL_EXHIBITS,
@@ -23,7 +30,7 @@ function getDatoClient() {
 
   if (!token) {
     throw new Error(
-      'DATOCMS_API_TOKEN is not set. DatoCMS requests must run server-side with this env var configured.',
+      'DATOCMS_API_TOKEN is not set. DatoCMS requests must run server-side with this env var configured.'
     );
   }
 
@@ -84,7 +91,9 @@ export async function getVisit(): Promise<DatoVisit | undefined> {
 export async function getTrustees(): Promise<DatoTrustee[]> {
   try {
     const data = await getDatoClient().request<{allTrustees: DatoTrustee[]}>(GET_ALL_TRUSTEES);
-    return data.allTrustees.sort((a, b) => a.name.split(' ')[1]!.localeCompare(b.name.split(' ')[1]!));
+    return data.allTrustees.sort((a, b) =>
+      a.name.split(' ')[1]!.localeCompare(b.name.split(' ')[1]!)
+    );
   } catch (error) {
     console.error('Error fetching trustees from DatoCMS:', error);
     return [];
@@ -94,7 +103,9 @@ export async function getTrustees(): Promise<DatoTrustee[]> {
 export async function getStaff(): Promise<DatoTrustee[]> {
   try {
     const data = await getDatoClient().request<{allStaffs: DatoTrustee[]}>(GET_ALL_STAFF);
-    return data.allStaffs.sort((a, b) => a.name.split(' ')[1]!.localeCompare(b.name.split(' ')[1]!));
+    return data.allStaffs.sort((a, b) =>
+      a.name.split(' ')[1]!.localeCompare(b.name.split(' ')[1]!)
+    );
   } catch (error) {
     console.error('Error fetching staff from DatoCMS:', error);
     return [];
