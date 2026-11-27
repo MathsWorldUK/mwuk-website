@@ -1,3 +1,6 @@
+/** The visitor centres that have their own website. */
+export type Site = 'london' | 'leeds';
+
 export interface DatoEvent {
   slug: string;
   title: string;

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styles from './footer.module.css';
 import Image from 'next/image';
+import {SITES} from './sites';
 
 const SPONSORS = [
   {id: 'aitt', name: 'Association of Information Technology Trust', link: ''},
@@ -15,9 +16,10 @@ const SPONSORS = [
 
 type FooterProps = {
   showSponsorLogos?: boolean;
+  socials?: {title: string; url: string}[];
 };
 
-export function Footer({showSponsorLogos = true}: FooterProps) {
+export function Footer({showSponsorLogos = true, socials = SITES.london.socials}: FooterProps) {
   return (
     <footer className={styles.footer}>
       <p>
@@ -36,21 +38,14 @@ export function Footer({showSponsorLogos = true}: FooterProps) {
       )}
       <p>
         Follow us on{' '}
-        <a href={'https://www.instagram.com/mathsworlduk/'} target={'_blank'}>
-          Instagram
-        </a>{' '}
-        •{' '}
-        <a href={'https://www.facebook.com/mathsworlduk'} target={'_blank'}>
-          Facebook
-        </a>{' '}
-        •{' '}
-        <a href={'https://bsky.app/profile/mathsworld.com'} target={'_blank'}>
-          Bluesky
-        </a>{' '}
-        •{' '}
-        <a href={'https://www.tiktok.com/@mathsworlduk'} target={'_blank'}>
-          TikTok
-        </a>
+        {socials.map((s, i) => (
+          <span key={s.url}>
+            {i > 0 ? ' • ' : ''}
+            <a href={s.url} target={'_blank'}>
+              {s.title}
+            </a>
+          </span>
+        ))}
       </p>
     </footer>
   );

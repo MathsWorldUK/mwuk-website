@@ -77,15 +77,29 @@ export const GET_EXHIBIT_BY_ID = gql`
   }
 `;
 
-export const GET_VISIT = gql`
-  query GetAllVisits {
+const VISIT_FIELDS = `
+  openingHours
+  directions
+  ticketPrices
+  accessibility
+  schoolVisits
+  groupVisits
+`;
+
+// London uses the original `visit` singleton model in DatoCMS.
+export const GET_VISIT_LONDON = gql`
+  query GetVisitLondon {
     visit {
-      openingHours
-      directions
-      ticketPrices
-      accessibility
-      schoolVisits
-      groupVisits
+      ${VISIT_FIELDS}
+    }
+  }
+`;
+
+// Leeds uses a separate `visit_leeds` singleton model with the same fields.
+export const GET_VISIT_LEEDS = gql`
+  query GetVisitLeeds {
+    visitLeeds {
+      ${VISIT_FIELDS}
     }
   }
 `;

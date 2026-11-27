@@ -2,6 +2,7 @@ import {SiteSwitch} from '@repo/ui/site-switch';
 import {Ubuntu} from 'next/font/google';
 import {Header} from '@repo/ui/header';
 import {Footer} from '@repo/ui/footer';
+import {SITES, siteLinks} from '@repo/ui/sites';
 import type {Metadata} from 'next';
 import {Analytics} from '@vercel/analytics/next';
 
@@ -42,21 +43,10 @@ export default function Layout({children}: Readonly<{children: React.ReactNode}>
         <Header
           logo={'/images/logo.svg'}
           logoAlt={'MathsWorld London'}
-          links={[
-            {title: 'Visit', icon: 'visit', url: '/visit'},
-            {title: 'Events', icon: 'events', url: '/events'},
-            {title: 'Exhibits', icon: 'exhibits', url: '/exhibits'},
-            {title: 'Support', icon: 'donate', url: '/support'},
-            {
-              title: 'Tickets',
-              icon: 'tickets',
-              url: 'https://mathscity.digitickets.co.uk/tickets?branches.branchID=3679',
-              special: true,
-            },
-          ]}
+          links={siteLinks('london')}
         />
         <main>{children}</main>
-        <Footer showSponsorLogos={true} />
+        <Footer showSponsorLogos={true} socials={SITES.london.socials} />
         <Analytics />
       </body>
     </html>

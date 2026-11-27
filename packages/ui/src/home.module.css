@@ -25,3 +25,25 @@
   a&:hover { background: color-mix( in srgb, var(--p1) 40%, transparent); }
   span, img { display: block; margin: 4px auto 0; font-size: 1rem; font-style: italic; color: #aaa; }
 }
+
+.awards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.award {
+  width: 250px;
+  text-align: center;
+  background: white;
+  border-radius: 12px;
+  padding: 16px 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: inherit;
+  text-decoration: none;
+  img { display: block; margin: 0 auto 8px; }
+  h3 { font-size: 1.2rem; margin-bottom: 4px; }
+  p { font-size: 1rem; margin: 0; color: rgba(0, 0, 0, 0.7); }
+}
