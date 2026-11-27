@@ -1,10 +1,9 @@
-import Image from 'next/image';
 import {Hero} from '@repo/ui/hero';
-import styles from './page.module.css';
+import {HomePage, LocationMap, MathsQuote, Testimonials} from '@repo/ui/home';
 
 export default function Home() {
   return (
-    <div className={styles.page}>
+    <HomePage>
       <title>MathsWorld – London’s new Mathematics Discovery Centre</title>
       <h1 className={'fill'}>
         Explore! Discover! Solve!
@@ -25,21 +24,10 @@ export default function Home() {
             families, groups and school classes.
           </p>
         </div>
-        <div>
-          <a
-            href={'https://maps.app.goo.gl/jbQYo77AV8Rcihdz8'}
-            target={'_blank'}
-            className={'tile-wrap'}>
-            <Image
-              src={'/images/map.png'}
-              className={'tile'}
-              width={340}
-              height={220}
-              alt={'Location Map'}
-            />
-          </a>
-          <p className={styles.caption}>Arches, 6 Burrell St, London SE1 0UN</p>
-        </div>
+        <LocationMap
+          href={'https://maps.app.goo.gl/jbQYo77AV8Rcihdz8'}
+          address={'Arches, 6 Burrell St, London SE1 0UN'}
+        />
       </div>
       <p>
         Whether you’re a lifelong maths enthusiast, a curious sceptic or a reluctant engager with
@@ -55,53 +43,38 @@ export default function Home() {
         us.
       </p>
       <h2 className={'fill green'}>What People say</h2>
-      <div className={'row'}>
-        <a
-          href={
-            'https://www.thesun.co.uk/travel/36922051/uk-attraction-rivals-science-natural-history-museums/'
-          }
-          target={'_blank'}
-          className={styles.quote}>
-          “Huge new attraction”
-          <Image src={'/images/sun.png'} alt={'The Sun'} width={80} height={32} />
-        </a>
-        <a
-          href={'https://www.timeout.com/london/kids/mathsworld'}
-          target={'_blank'}
-          className={styles.quote}>
-          “Wholesome new attraction for number-loving youngsters”
-          <Image src={'/images/timeout.png'} alt={'Timeout London'} width={80} height={32} />
-        </a>
-        <a
-          href={'https://secretldn.com/mathsworld-immersive-maths-museum-discovery-centre/'}
-          target={'_blank'}
-          className={styles.quote}>
-          “Exciting new discovery centre will challenge, intrigue, and delight”
-          <span>Secret London</span>
-        </a>
-        <div className={styles.quote}>
-          “Amazing new centre. Will definitely return”
-          <span>Wendy</span>
-        </div>
-        <div className={styles.quote}>
-          “Absolutely wonderful space. [The kids] spent hours immersed in the activities”
-          <span>Nelly</span>
-        </div>
-      </div>
-      <Image
-        src={'/images/banners/puzzles.jpg'}
-        className={'hero'}
-        alt={''}
-        width={820}
-        height={200}
+      <Testimonials
+        items={[
+          {
+            quote: 'Huge new attraction',
+            source: 'The Sun',
+            logo: '/images/sun.png',
+            url: 'https://www.thesun.co.uk/travel/36922051/uk-attraction-rivals-science-natural-history-museums/',
+          },
+          {
+            quote: 'Wholesome new attraction for number-loving youngsters',
+            source: 'Timeout London',
+            logo: '/images/timeout.png',
+            url: 'https://www.timeout.com/london/kids/mathsworld',
+          },
+          {
+            quote: 'Exciting new discovery centre will challenge, intrigue, and delight',
+            source: 'Secret London',
+            url: 'https://secretldn.com/mathsworld-immersive-maths-museum-discovery-centre/',
+          },
+          {quote: 'Amazing new centre. Will definitely return', source: 'Wendy'},
+          {
+            quote: 'Absolutely wonderful space. [The kids] spent hours immersed in the activities',
+            source: 'Nelly',
+          },
+        ]}
       />
-      <blockquote>
-        <p>
-          Mathematics has beauty and romance. It’s not a boring place to be, the mathematical world.
-          It’s an extraordinary place; it’s worth spending time there.
-        </p>
-        <p>– Marcus du Sautoy, British mathematician</p>
-      </blockquote>
-    </div>
+      <MathsQuote
+        quote={
+          'Mathematics has beauty and romance. It’s not a boring place to be, the mathematical world. It’s an extraordinary place; it’s worth spending time there.'
+        }
+        author={'Marcus du Sautoy, British mathematician'}
+      />
+    </HomePage>
   );
 }

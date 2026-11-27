@@ -1,12 +1,12 @@
 'use client';
 
 import {useState} from 'react';
-import styles from './tabs.module.css';
+import styles from './exhibit-tabs.module.css';
 import {markdown} from '@repo/data/utilities';
 import {DatoExhibit} from '@repo/data/interfaces';
-import S1Icon from '@repo/ui/icons/s1.svg';
-import S2Icon from '@repo/ui/icons/s2.svg';
-import S3Icon from '@repo/ui/icons/s3.svg';
+import S1Icon from '../icons/s1.svg';
+import S2Icon from '../icons/s2.svg';
+import S3Icon from '../icons/s3.svg';
 
 function TabBody({exhibit, tab}: {exhibit: DatoExhibit; tab: number}) {
   switch (tab) {

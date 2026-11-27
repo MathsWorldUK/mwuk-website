@@ -25,7 +25,7 @@ const ICONS = {
 interface HeaderProps {
   logo: string;
   logoAlt: string;
-  links: {url: string; title: string; icon: keyof typeof ICONS; special?: boolean}[];
+  links: readonly {url: string; title: string; icon: keyof typeof ICONS; special?: boolean}[];
 }
 
 export function Header(props: HeaderProps) {

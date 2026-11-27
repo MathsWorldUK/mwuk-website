@@ -7,13 +7,15 @@ import {
   DatoTrustee,
   DatoNews,
   DatoAmbassador,
+  Site,
 } from './interfaces';
 import {
   GET_ALL_EVENTS,
   GET_ALL_EXHIBITS,
   GET_EVENT_BY_ID,
   GET_EXHIBIT_BY_ID,
-  GET_VISIT,
+  GET_VISIT_LONDON,
+  GET_VISIT_LEEDS,
   GET_ALL_TRUSTEES,
   GET_ALL_STAFF,
   GET_ALL_NEWS,
@@ -79,12 +81,16 @@ export async function getExhibit(slug: string): Promise<DatoExhibit | undefined>
   }
 }
 
-export async function getVisit(): Promise<DatoVisit | undefined> {
+export async function getVisit(site: Site): Promise<DatoVisit | undefined> {
   try {
-    const data = await getDatoClient().request<{visit: DatoVisit}>(GET_VISIT);
+    if (site === 'leeds') {
+      const data = await getDatoClient().request<{visitLeeds: DatoVisit}>(GET_VISIT_LEEDS);
+      return data.visitLeeds;
+    }
+    const data = await getDatoClient().request<{visit: DatoVisit}>(GET_VISIT_LONDON);
     return data.visit;
   } catch (error) {
-    console.error(`Error fetching visit from DatoCMS:`, error);
+    console.error(`Error fetching ${site} visit from DatoCMS:`, error);
   }
 }
 

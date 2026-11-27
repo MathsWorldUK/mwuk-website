@@ -5,6 +5,7 @@
   "exports": {
     "./*.css": "./src/*.css",
     "./*.svg": "./src/*.svg",
+    "./sites": "./src/sites.ts",
     "./*": "./src/*.tsx"
   },
   "scripts": {
@@ -21,6 +22,7 @@
     "typescript": "5.9.2"
   },
   "dependencies": {
+    "@repo/data": "*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   }
